@@ -25,6 +25,7 @@
     "if-env": "^1.0.0"
   },
   "dependencies": {
+    "bulma": "^0.4.2",
     "gh-pages": "^1.0.0",
     "preact": "^8.1.0",
     "preact-cli": "^1.1.2",
