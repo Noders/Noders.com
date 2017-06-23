@@ -13,7 +13,7 @@ export default class Header extends Component {
 				<div class={[style.fullHeight, style.background].join(' ')} />
 				<div class={[style.fullHeight, style.content].join(' ')}>
 					<img src={image} class={loadImage} />
-					<h1>¿Porqué? Porque nos gusta</h1>
+					<h1>¿Por qué? Porque nos gusta</h1>
 				</div>
 			</div>
 		);
