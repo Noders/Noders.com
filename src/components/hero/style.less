@@ -1,0 +1,46 @@
+@import '~style/helpers';
+
+.fullHeight {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		color: white;	
+		text-align: center;
+	}
+	img {
+		max-width: 100%;
+		opacity: 1;
+    transition: all 1750ms;
+	}
+}
+img {
+	&.showImage {
+		opacity: 1;
+	}
+}
+
+.background {
+	background: @noders url(../../assets/noders/bg3-min.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: absolute;
+	filter: hue-rotate(-10deg) grayscale(60%);
+
+	&:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.3);
+    transition: all 1s;
+	}
+}
+
+.content {
+	padding: 1em;
+	z-index: 1;
+}
