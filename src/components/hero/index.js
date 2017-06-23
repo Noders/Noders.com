@@ -7,13 +7,13 @@ export default class Header extends Component {
 		setTimeout(() => this.setState({ load: true }), 750);
 	}
 	render() {
-		const loadImage = this.state.load ? style.showImage : null ;
+		const showable = this.state.load ? style.showable : null ;
 		return (
 			<div class={style.fullHeight}>
 				<div class={[style.fullHeight, style.background].join(' ')} />
-				<div class={[style.fullHeight, style.content].join(' ')}>
-					<img src={image} class={loadImage} />
-					<h1>¿Por qué? Porque nos gusta</h1>
+				<div class={[style.fullHeight, style.content, showable].join(' ')}>
+					<img src={image}  />
+					<h1 >¿Por qué? Porque nos gusta</h1>
 				</div>
 			</div>
 		);

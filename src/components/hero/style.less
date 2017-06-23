@@ -7,20 +7,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	h1 {
-		color: white;	
-		text-align: center;
-	}
-	img {
-		max-width: 100%;
-		opacity: 0;
-    transition: all 1750ms;
-	}
-}
-img {
-	&.showImage {
-		opacity: 1;
-	}
 }
 
 .background {
@@ -29,7 +15,6 @@ img {
 	background-attachment: fixed;
 	position: absolute;
 	filter: hue-rotate(-10deg) grayscale(60%);
-
 	&:after {
     content: "";
     display: block;
@@ -41,6 +26,19 @@ img {
 }
 
 .content {
+	opacity: 0;
 	padding: 1em;
 	z-index: 1;
+	transition: all 1750ms;
+	img {
+		max-width: 100%;
+	}
+	h1 {
+		color: white;	
+		text-align: center;
+		font-size: 2em;
+	}
+	&.showable {
+		opacity: 1;
+	}
 }
