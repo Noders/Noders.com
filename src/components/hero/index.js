@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import style from './style';
-import image from '../../assets/noders/noderslogo.png';
+import image from '../../assets/noders/noderslogo_2.png';
 
 export default class Header extends Component {
 	componentDidMount() {

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "eslint src && preact test",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
+    "build": "preact build --no-prerender",
+    "build:pre-render": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
     "deploy:gh": "gh-pages -d build"
@@ -20,12 +21,12 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-synacor": "^1.0.0",
-    "if-env": "^1.0.0",
-    "preact-cli": "^1.1.1"
+    "if-env": "^1.0.0"
   },
   "dependencies": {
     "gh-pages": "^1.0.0",
     "preact": "^8.1.0",
+    "preact-cli": "^1.1.2",
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.2"
   }
