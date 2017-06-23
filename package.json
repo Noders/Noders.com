@@ -10,8 +10,8 @@
     "build:pre-render": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
-    "deploy:gh": "gh-pages -d build",
-    "yolo": "npm run build & npm run deploy:gh"
+    "deploy": "gh-pages -d build",
+    "yolo": "npm run build && npm run deploy"
   },
   "keywords": [],
   "author": "",
