@@ -4,8 +4,8 @@ import style from './style';
 
 const Events = (props, context) =>
   (
-    <section className={style.eventsSection}>
-      <div className={style.eventsTitle}>
+    <section className="section-container">
+      <div className="section-title">
         <h1 className="title">Eventos</h1>
         <hr />
       </div>
