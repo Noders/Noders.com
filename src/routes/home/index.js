@@ -5,13 +5,13 @@ import Events from '../../components/events';
 import Community from '../../components/community';
 
 export default class Home extends Component {
-	render() {
-		return (
-			<div class={style.home}>
-				<Hero />
+  render() {
+    return (
+      <div class={style.home}>
+        <Hero />
         <Events />
         <Community />
-			</div>
-		);
-	}
+      </div>
+    );
+  }
 }

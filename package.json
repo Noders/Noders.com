@@ -4,28 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src && preact test",
+    "test": "npm run lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "build": "preact build --no-prerender",
     "build:pre-render": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
+    "lint": "eslint src",
     "deploy": "gh-pages -d build",
     "yolo": "yarn run build && yarn run deploy"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "eslintConfig": {
-    "extends": "eslint-config-synacor"
-  },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-synacor": "^1.0.0",
+    "babel-eslint": "7",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-standard": "^3.0.1",
     "if-env": "^1.0.0"
   },
   "dependencies": {
     "bulma": "^0.4.2",
+    "eslint-plugin-node": "^5.1.0",
     "gh-pages": "^1.0.0",
     "preact": "^8.1.0",
     "preact-cli": "^1.1.2",
