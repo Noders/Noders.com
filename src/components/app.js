@@ -23,7 +23,6 @@ export default class App extends Component {
         <Router onChange={this.handleRoute}>
           <Home path="/" />
           <Media path="/media/" />
-          <Media path="/media/:projectId" />
         </Router>
       </div>
     );
