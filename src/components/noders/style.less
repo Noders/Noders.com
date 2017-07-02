@@ -1,0 +1,42 @@
+.container {
+  padding: 1em;
+}
+.flexContainer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.hexagonContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -31px;
+}
+.hexagon {
+  display: inline-block;
+  overflow: hidden;
+  visibility: hidden;
+  transform: rotate(120deg);
+  cursor: pointer;
+}
+.hexagon-in1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+}
+.hexagon-in2 {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  visibility: visible;
+  transform: rotate(-60deg);
+  background-size: 130%;
+}
+
+.hexagon2 {
+  width: 50px;
+  height: 100px;
+}
