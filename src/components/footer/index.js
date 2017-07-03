@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import style from './style';
 import { classJoin } from '../../helpers';
-import members from '../../assets/data/members';
 
 const Footer = () => (
   <footer class={'footer'}>
