@@ -1,5 +1,4 @@
 import { h } from 'preact';
-import { Link } from 'preact-router';
 import style from './style';
 
 const Events = () => (
@@ -11,23 +10,23 @@ const Events = () => (
     <div className="level">
       <div className="level-item has-text-centered">
         <figure className={style.eventImage}>
-          <Link href="/events/santiagojs">
+          <a href="https://github.com/Noders/Meetups" target="_blank">
             <img src="../../assets/images/meetupsjs.png" alt="santiagojs" />
-          </Link>
+          </a>
         </figure>
       </div>
       <div className="level-item has-text-centered">
         <figure className={[style.eventImage, style.centerContent]}>
-          <Link href="/events/nodeschool">
+          <a href="https://github.com/nodeschool/santiago" target="_blank">
             <img src="../../assets/images/nodeschool.png" alt="nodeschoolsantiago" />
-          </Link>
+          </a>
         </figure>
       </div>
       <div className="level-item has-text-centered">
         <figure className={style.eventImage}>
-          <Link href="/events/eventloop">
+          <a href="https://github.com/Noders/eventloop" target="_blank">
             <img src="../../assets/images/eventloop.png" alt="eventloop" className={style.eventLoopLogo} />
-          </Link>
+          </a>
         </figure>
       </div>
     </div>
