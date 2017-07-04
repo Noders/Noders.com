@@ -5,8 +5,6 @@ import Header from './header';
 import Home from '../routes/home';
 import Media from '../routes/media';
 import Footer from './footer';
-// import Home from 'async!./home';
-// import Profile from 'async!./profile';
 
 export default class App extends Component {
   /** Gets fired when the route changes.
