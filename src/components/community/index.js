@@ -5,6 +5,7 @@ import Noders from '../noders';
 
 const Community = () => (
   <section className="section-container">
+    { /*
     <div className="section-title">
       <h1 className="title">Comunidad</h1>
       <hr />
@@ -19,6 +20,7 @@ const Community = () => (
         </div>)
       )}
     </div>
+    */ }
     <Noders />
   </section>
 );
