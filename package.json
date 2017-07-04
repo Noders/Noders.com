@@ -28,8 +28,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "font-awesome": "^4.7.0",
     "if-env": "^1.0.0",
-    "install": "^0.10.1",
-    "npm": "^5.0.4"
+    "install": "^0.10.1"
   },
   "dependencies": {
     "bulma": "^0.4.2",
