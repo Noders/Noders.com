@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && preact test",
+    "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "build": "preact build --no-prerender",
     "build:pre-render": "preact build",
