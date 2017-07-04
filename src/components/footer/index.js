@@ -1,6 +1,10 @@
 import { h } from 'preact';
 import style from './style';
 import { classJoin } from '../../helpers';
+<<<<<<< HEAD
+=======
+import members from '../../assets/data/members';
+>>>>>>> 85029ab8df8c4ceb9710c6b5cac79a2aa1cfeb07
 
 const Footer = () => (
   <footer class={'footer'}>
@@ -47,6 +51,10 @@ const Footer = () => (
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85029ab8df8c4ceb9710c6b5cac79a2aa1cfeb07
     </div>
   </footer>
 );
