@@ -1,6 +1,6 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
+  "name": "Noders",
+  "short_name": "Noders",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
