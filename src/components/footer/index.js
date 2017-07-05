@@ -7,7 +7,7 @@ const Footer = () => (
     <div class={classJoin('container', style.social)}>
       <div class={classJoin('content has-text-centered')}>
         <p>
-          Noders.com está mantenido por el <a href="http://github.com/noders">Noders Core Team</a>.
+          Noders.com está Mantenido por el <a href="http://github.com/noders">Noders Core Team</a>.
         </p>
       </div>
 
@@ -47,7 +47,6 @@ const Footer = () => (
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 );
