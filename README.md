@@ -22,7 +22,7 @@ PR's are always welcome! If you find a bug or want to add an improvement, please
 
 3.- Edit files inside the `src/` folder.
 
-4.- Squash your commits into 1 before submitting a PR. Also, make sure there are no linting errors before submitting.
+4.- Please make sure there are no linting errors before submitting. You can run `yarn lint` to check this.
 
 We usually review PR's shortly after they're submitted, but if for any reason we haven't after 24 hours, feel free to ping us on Slack or through the same PR.
 
