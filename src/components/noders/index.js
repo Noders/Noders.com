@@ -22,7 +22,7 @@ export default class Header extends Component {
   componentWillMount() {
     import('./data.json')
       .then(data => this.setState({
-        noders: this.shuffleArray(data.users),
+        noders: this.shuffleArray(data.users)
       }));
   }
   render() {
