@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 import image from '../../assets/noders/noderslogo_2.png';
+import { classJoin } from '../../helpers';
 
 export default class Header extends Component {
   componentDidMount() {
@@ -10,10 +11,20 @@ export default class Header extends Component {
     const showable = this.state.load ? style.showable : null;
     return (
       <div class={style.fullHeight}>
-        <div class={[style.fullHeight, style.background].join(' ')} />
-        <div class={[style.fullHeight, style.content, showable].join(' ')}>
+        <div class={style.mainOverlay} />
+        <div class={classJoin(style.fullHeight, style.background)} />
+        <div class={classJoin(style.fullHeight, style.content, showable, style.nodersLogo)}>
           <img src={image} />
           <h1 >¿Por qué? Porque nos gusta</h1>
+          <a href="https://fforres.typeform.com/to/z2Rj7z"
+            class={classJoin('button', 'is-success', 'is-large', style.mainButtonCta)}>
+            <span class="icon is-medium">
+              <i class="fa fa-slack" />
+            </span>
+            <span>
+              Únete a nuestro Slack
+            </span>
+          </a>
         </div>
       </div>
     );
