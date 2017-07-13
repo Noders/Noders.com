@@ -11,9 +11,9 @@ export default class Header extends Component {
           <Link activeClassName={style.active} href="/">
             <img src={Icon} class={style.logoIcon} />
           </Link>
-          <Link activeClassName={style.active} href="/eventos">Eventos</Link>
+          <a href="#eventos">Eventos</a>
           <Link activeClassName={style.active} href="/media">Media</Link>
-          <Link activeClassName={style.active} href="/comunidad">Comunidad</Link>
+          <a href="#comunidad">Comunidad</a>
         </nav>
       </header>
     );

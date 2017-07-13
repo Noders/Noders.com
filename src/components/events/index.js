@@ -3,6 +3,7 @@ import style from './style';
 
 const Events = () => (
   <section className="section-container">
+    <a name="eventos" />
     <div className="section-title">
       <h1 className="title">Eventos</h1>
       <hr />
