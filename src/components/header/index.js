@@ -12,7 +12,7 @@ export default class Header extends Component {
             <img src={Icon} class={style.logoIcon} />
           </Link>
           <a href="#eventos">Eventos</a>
-          <Link activeClassName={style.active} href="/media">Media</Link>
+          <a href="#media">Media</a>
           <a href="#comunidad">Comunidad</a>
         </nav>
       </header>
