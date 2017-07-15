@@ -4,9 +4,10 @@ import nodersYoutube from '../../assets/images/noders-youtube-200.png';
 import nodersCast from '../../assets/images/noders-cast-200.png';
 
 export default () => (
-  <section>
-    <div class={style.title}>
-      <h1>Media</h1>
+  <section className="section-container">
+    <a name="media" />
+    <div className="section-title">
+      <h1 className="title">Media</h1>
       <hr />
     </div>
     <div className="level">
@@ -14,7 +15,7 @@ export default () => (
         <figure>
           <a href="https://www.youtube.com/channel/UC7tUsO3S7424TMcgSCUOCow/feed" target="_blank" className={style}>
             <img src={nodersYoutube} class={style.image} alt="youtube" />
-            <h3 class={style.imageTitle}> Youtube </h3>
+            <h3 class={style.imageTitle}> YouTube </h3>
           </a>
         </figure>
       </div>
