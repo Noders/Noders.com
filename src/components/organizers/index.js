@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import style from './style';
 import members from '../../assets/data/members';
-import Noders from '../noders';
 import { classJoin } from '../../helpers';
 
 const Community = () => (
@@ -22,7 +21,6 @@ const Community = () => (
           </div>)
         )}
       </div>
-      <Noders />
     </div>
   </section>
 );

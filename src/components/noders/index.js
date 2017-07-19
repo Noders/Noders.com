@@ -28,13 +28,16 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <section>
-        <div className="section-title">
-          <h1 className="title">Comunidad</h1>
-          <hr />
-        </div>
-        <div class={classJoin('level', style.flexContainer, 'section-content')}>
-          {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
+      <section className={classJoin('section', style.section)}>
+        <div className="container">
+          <a name="comunidad" />
+          <div className="section-title">
+            <h1 className="title">Comunidad</h1>
+            <hr />
+          </div>
+          <div class={classJoin('level', style.flexContainer, 'section-content')}>
+            {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
+          </div>
         </div>
       </section>
     );
