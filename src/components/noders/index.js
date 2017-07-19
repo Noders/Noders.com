@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 import Member from './member';
+import { classJoin } from '../../helpers';
 
 export default class Header extends Component {
   constructor () {
@@ -27,12 +28,12 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <section class={['section-container', style.container].join(' ')}>
+      <section>
         <div className="section-title">
-          <h3>Algunos Noders!</h3>
+          <h1 className="title">Comunidad</h1>
           <hr />
         </div>
-        <div class={['level', style.flexContainer].join(' ')}>
+        <div class={classJoin('level', style.flexContainer, 'section-content')}>
           {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
         </div>
       </section>

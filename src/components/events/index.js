@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import style from './style';
+import { classJoin } from '../../helpers';
 
 const Events = () => (
   <section className="section-container">
@@ -8,7 +9,7 @@ const Events = () => (
       <h1 className="title">Eventos</h1>
       <hr />
     </div>
-    <div className="level">
+    <div class={classJoin('level', 'section-content')}>
       <div className="level-item has-text-centered">
         <figure className={style.eventImage}>
           <a href="https://github.com/Noders/Meetups" target="_blank">

@@ -8,7 +8,7 @@ const CodeOfConduct = () => (
       <h1 className="title">Código de Conducta</h1>
       <hr />
     </div>
-    <div className="container">
+    <div className="section-content">
       <div className={classJoin(style.cocText, 'content', 'has-text-centered')}>
         <i class={classJoin('fa fa-file-text-o', style.cocIcon)} />
         <p>

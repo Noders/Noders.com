@@ -3,9 +3,9 @@ import style from './style';
 import { classJoin } from '../../helpers';
 
 const Footer = () => (
-  <footer class={'footer'}>
+  <footer class={classJoin('footer', style.footerSection)}>
     <div class={classJoin('container', style.social)}>
-      <div class={classJoin('content has-text-centered')}>
+      <div class={classJoin('content has-text-centered', style.disclaimer)}>
         <p>
           Noders.com está Mantenido por el <a href="http://github.com/noders">Noders Core Team</a>.
         </p>
@@ -39,7 +39,7 @@ const Footer = () => (
           </div>
         </div>
         <div class={'column is-4'}>
-          <div class={classJoin('content', 'has-text-centered')}>
+          <div class={classJoin('content', 'has-text-centered', style.disclaimer)}>
             <p>
               Código fuente bajo licencia <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br />
               Sitio creado con ❤️ por <a href="https://twitter.com/fforres" target="_blank">@fforres</a> y <a href="https://twitter.com/xabadu" target="_blank">@xabadu</a>.
