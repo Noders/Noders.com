@@ -2,6 +2,7 @@ import { h } from 'preact';
 import style from './style';
 import nodersYoutube from '../../assets/images/noders-youtube-200.png';
 import nodersCast from '../../assets/images/noders-cast-200.png';
+import { classJoin } from '../../helpers';
 
 export default () => (
   <section className="section-container">
@@ -10,7 +11,7 @@ export default () => (
       <h1 className="title">Media</h1>
       <hr />
     </div>
-    <div className="level">
+    <div class={classJoin('level', 'section-content')}>
       <div className="level-item has-text-centered">
         <figure>
           <a href="https://www.youtube.com/channel/UC7tUsO3S7424TMcgSCUOCow/feed" target="_blank" className={style}>
