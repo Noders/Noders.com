@@ -3,7 +3,7 @@ import style from './style';
 import members from '../../assets/data/members';
 import { classJoin } from '../../helpers';
 
-const Community = () => (
+const Organizers = () => (
   <section className={classJoin('section', style.section)}>
     <div className="container">
       <a name="comunidad" />
@@ -25,4 +25,4 @@ const Community = () => (
   </section>
 );
 
-export default Community;
+export default Organizers;

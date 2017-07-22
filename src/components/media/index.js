@@ -4,7 +4,7 @@ import nodersYoutube from '../../assets/images/noders-youtube-200.png';
 import nodersCast from '../../assets/images/noders-cast-200.png';
 import { classJoin } from '../../helpers';
 
-export default () => (
+const Media = () => (
   <section className={classJoin('section', style.section)}>
     <div className="container">
       <a name="media" />
@@ -33,3 +33,5 @@ export default () => (
     </div>
   </section>
 );
+
+export default Media;

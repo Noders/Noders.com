@@ -9,21 +9,6 @@
 	align-items: center;
 }
 
-.background {
-	background: @noders url(../../assets/noders/bg3-min.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	position: absolute;
-	filter: hue-rotate(-10deg) grayscale(60%);
-	&:after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0, 0.3);
-    transition: all 1s;
-	}
-}
 
 .content {
 	opacity: 0;
@@ -34,7 +19,7 @@
 		max-width: 100%;
 	}
 	h1 {
-		color: white;	
+		color: white;
 		text-align: center;
 		font-size: 2em;
 	}
@@ -43,16 +28,6 @@
 	}
 }
 
-.mainOverlay {
-  background-color: @dark;
-  opacity: 0.8;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 .nodersLogo {
   z-index: 20;

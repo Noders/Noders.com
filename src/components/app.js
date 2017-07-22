@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
-
 import Header from './header';
 import Home from '../routes/home';
 import Footer from './footer';

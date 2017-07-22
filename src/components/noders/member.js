@@ -1,18 +1,21 @@
 import { h, Component } from 'preact';
 import style from './style';
 import { classJoin } from '../../helpers';
-export default class Header extends Component {
-  constructor () {
-    super();
+
+export default class Member extends Component {
+  constructor (props) {
+    super(props);
     this.state = {
       active: false
     };
   }
+
   clicked = () => {
     this.setState({
       active: !this.state.active
     })
   }
+  
   render() {
     const { username, image } = this.props;
     const activeClass = this.state.active ? style.activeHexagon : null;
