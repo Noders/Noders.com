@@ -3,7 +3,7 @@ import style from './style';
 import image from '../../assets/noders/noderslogo_2.png';
 import { classJoin } from '../../helpers';
 
-export default class Header extends Component {
+export default class Hero extends Component {
   componentDidMount() {
     setTimeout(() => this.setState({ load: true }), 750);
   }

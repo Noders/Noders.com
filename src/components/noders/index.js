@@ -3,9 +3,9 @@ import style from './style';
 import Member from './member';
 import { classJoin } from '../../helpers';
 
-export default class Header extends Component {
-  constructor () {
-    super();
+export default class Noders extends Component {
+  constructor (props) {
+    super(props);
     this.state = {
       noders: []
     };
