@@ -1,8 +1,6 @@
 import { h, Component } from 'preact';
-import style from './style';
 
 export default class Member extends Component {
-
   render() {
     const { image } = this.props;
     return (
