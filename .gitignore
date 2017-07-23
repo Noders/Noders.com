@@ -97,3 +97,5 @@ Temporary Items
 !.vscode/extensions.json
 
 # End of https://www.gitignore.io/api/osx,node,visualstudiocode
+
+build
