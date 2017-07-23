@@ -39,6 +39,7 @@ export default class Noders extends Component {
             {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
           </div>
         </div>
+
       </section>
     );
   }
