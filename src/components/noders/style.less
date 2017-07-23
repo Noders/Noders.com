@@ -1,4 +1,5 @@
 @import '~style/helpers';
+@hexUrl: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyMDBweCIgaGVpZ2h0PSIyMDBweCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwMCAyMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjEzLjQ5OSw0OS44NzYgOTkuODg3LDAgMTg2LjI4NCw0OS44NzkgMTg2LjI4NCwxNDkuNjM1IDk5Ljg4NywxOTkuNTE2IDEzLjQ5OSwxNDkuNjMgIi8+Cjwvc3ZnPg==";
 
 .container {
   padding: 1em;
@@ -7,73 +8,6 @@
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-}
-.hexagonContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -3em;
-}
-.hexagon {
-  display: inline-block;
-  overflow: hidden;
-  visibility: hidden;
-  transform: rotate(120deg);
-  cursor: pointer;
-
-  &:hover {
-    & .hexagon-in-layout {
-      opacity: 1;
-    }
-  }
-}
-
-.hexagon-in1 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  transform: rotate(-60deg);
-}
-.hexagon-in2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  visibility: visible;
-  transform: rotate(-60deg);
-  background-size: 130%;
-
-}
-.hexagon-in-layout {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 250ms ease;
-  transition: background-color 250ms ease;
-  background-color: rgba(0,0,0,0.6);
-  visibility: visible;
-  transform: rotate(-60deg);
-  display: flex;
-  font-size: 0.7em;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.hexagon2 {
-  width: 80px;
-  height: 160px;
-}
-
-.activeHexagon {
-  & .hexagon-in-layout {
-    opacity: 1;
-    background-color: rgba(0,0,0,0.7);
-  }
 }
 
 .section {
