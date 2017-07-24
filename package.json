@@ -12,7 +12,8 @@
     "dev": "preact watch",
     "lint": "eslint src",
     "deploy": "gh-pages -d build",
-    "yolo": "yarn run build && yarn run deploy"
+    "headers": "cp src/_headers build/_headers",
+    "yolo": "yarn build && && yarn headers && yarn deploy"
   },
   "keywords": [],
   "author": "",
