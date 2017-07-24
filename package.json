@@ -13,7 +13,7 @@
     "lint": "eslint src",
     "deploy": "gh-pages -d build",
     "headers": "cp src/_headers build/_headers",
-    "yolo": "yarn build && && yarn headers && yarn deploy"
+    "yolo": "yarn build && yarn headers && yarn deploy"
   },
   "keywords": [],
   "author": "",
