@@ -11,7 +11,7 @@ const Organizers = () => (
         <h1 className="title">Organizadores</h1>
         <hr />
       </div>
-      <div class={classJoin('level', 'section-content')}>
+      <div class={classJoin('level', 'section-content', style.organizersContainer)}>
         {members.map((member) =>
           (<div className="level-item has-text-centered">
             <figure>
