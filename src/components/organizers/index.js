@@ -13,7 +13,7 @@ const Organizers = () => (
       </div>
       <div class={classJoin('level', 'section-content', style.organizersContainer)}>
         {members.map((member) =>
-          (<div className="level-item has-text-centered">
+          (<div className={classJoin('level-item', 'has-text-centered', style.organizer)}>
             <figure>
               <a href={`https://twitter.com/${member.twitter}`}><img src={`../../assets/images/organizers/${member.image}`} className={style.memberImage} /></a>
               <p className={style.memberInfo}><a href={`https://twitter.com/${member.twitter}`}>@{member.username}</a></p>
