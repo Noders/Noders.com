@@ -1,5 +1,4 @@
 import { h } from 'preact';
-import { Link } from 'preact-router/match';
 import style from './style';
 import Icon from '../../assets/noders_icons/noders_white.svg';
 
