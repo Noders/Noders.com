@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 import Header from './header';
 import Home from '../routes/home';
 import Footer from './footer';
+import ForkMeRibbon from './forkMeRibbon';
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -22,6 +23,7 @@ export default class App extends Component {
           <Home path="/" />
         </Router>
         <Footer />
+        <ForkMeRibbon />
       </div>
     );
   }
