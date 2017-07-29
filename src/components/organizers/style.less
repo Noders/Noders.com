@@ -25,6 +25,7 @@
 
 .organizersContainer {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -32,4 +33,11 @@
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  .memberImage {
+    width: 100px;
+    height: 100px;
+  }
 }
