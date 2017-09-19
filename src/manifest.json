@@ -5,13 +5,13 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "theme_color": "#263037",
   "icons": [
     {
       "src": "/assets/noders_icons/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
-    }, 
+    },
     {
       "src": "/assets/noders_icons/android-chrome-512x512.png",
       "type": "image/png",

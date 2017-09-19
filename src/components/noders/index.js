@@ -4,13 +4,13 @@ import Member from './member';
 import { classJoin } from '../../helpers';
 
 export default class Noders extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
-      noders: []
+      noders: [],
     };
   }
-  shuffleArray = (oldArray) => {
+  shuffleArray = oldArray => {
     const array = [...oldArray];
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -19,12 +19,13 @@ export default class Noders extends Component {
       array[j] = temp;
     }
     return array;
-  }
+  };
   componentWillMount() {
-    import('./data.json')
-      .then(data => this.setState({
-        noders: this.shuffleArray(data.users)
-      }));
+    import('./data.json').then(data =>
+      this.setState({
+        noders: this.shuffleArray(data.users),
+      }),
+    );
   }
   render() {
     return (
@@ -35,11 +36,19 @@ export default class Noders extends Component {
             <h1 className="title">Comunidad</h1>
             <hr />
           </div>
-          <div class={classJoin('level', style.flexContainer, 'section-content')}>
-            {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
+          <div
+            class={classJoin('level', style.flexContainer, 'section-content')}
+          >
+            {this.state.noders.map(member => (
+              <span title={member.username}>
+                <Member
+                  username={member.username}
+                  image={member.images.image_192}
+                />
+              </span>
+            ))}
           </div>
         </div>
-
       </section>
     );
   }
