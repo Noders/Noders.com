@@ -15,7 +15,7 @@ const Organizers = () => (
         {members.map((member) =>
           (<div className={classJoin('level-item', 'has-text-centered', style.organizer)}>
             <figure>
-              <a href={`https://twitter.com/${member.twitter}`}><img src={`../../assets/images/organizers/${member.image}`} className={style.memberImage} /></a>
+              <a href={`https://twitter.com/${member.twitter}`}><img src={`../../assets/images/organizers/${member.image}`} alt={member.twitter} className={style.memberImage} /></a>
               <p className={style.memberInfo}><a href={`https://twitter.com/${member.twitter}`}>@{member.username}</a></p>
             </figure>
           </div>)
