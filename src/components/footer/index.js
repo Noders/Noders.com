@@ -42,7 +42,7 @@ const Footer = () => (
           <div class={classJoin('content', 'has-text-centered', style.disclaimer)}>
             <p>
               Código fuente bajo licencia <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br />
-              Sitio creado con ❤️ por <a href="https://twitter.com/fforres" target="_blank">@fforres</a> y <a href="https://twitter.com/xabadu" target="_blank">@xabadu</a>.
+              Sitio creado con ❤️ por <a href="https://twitter.com/fforres" target="_blank" rel="noopener">@fforres</a> y <a href="https://twitter.com/xabadu" target="_blank" rel="noopener">@xabadu</a>.
             </p>
           </div>
         </div>

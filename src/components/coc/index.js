@@ -13,7 +13,7 @@ const CodeOfConduct = () => (
         <div className={classJoin(style.cocText, 'content', 'has-text-centered')}>
           <i class={classJoin('fa fa-file-text-o', style.cocIcon)} />
           <p>
-            Todos nuestros eventos se rigen y respetan este <a href="https://github.com/Noders/code_of_conduct" target="_blank">Código de Conducta</a>.
+            Todos nuestros eventos se rigen y respetan este <a href="https://github.com/Noders/code_of_conduct" target="_blank" rel="noopener">Código de Conducta</a>.
           </p>
           <p>
             Si quieres participar de alguno de ellos, te pedimos que lo respetes y que nos ayuden a que otros lo hagan.
