@@ -16,7 +16,7 @@ const Media = () => (
         <div className="level-item has-text-centered">
           <figure>
             <a href="https://www.youtube.com/channel/UC7tUsO3S7424TMcgSCUOCow/feed" target="_blank" rel="noopener" className={style}>
-              <img src={nodersYoutube} class={style.image} alt="youtube" />
+              <img src={nodersYoutube} class={style.image} alt="Canal de YouTube de Noders" />
               <h3 class={style.imageTitle}> YouTube </h3>
             </a>
           </figure>
@@ -24,7 +24,7 @@ const Media = () => (
         <div className="level-item has-text-centered">
           <figure>
             <a href="https://www.youtube.com/playlist?list=PLBEwfn9JYDc-8LKrnlcogwrILF08EqLHF" target="_blank" rel="noopener" className={style}>
-              <img src={nodersCast} class={style.image} alt="noderscast" credits="podcast by Nate Eul from the Noun Project" />
+              <img src={nodersCast} class={style.image} alt="NodersCast" credits="podcast by Nate Eul from the Noun Project" />
               <h3 class={style.imageTitle}> NodersCast </h3>
             </a>
           </figure>
