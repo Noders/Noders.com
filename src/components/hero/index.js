@@ -11,7 +11,7 @@ export default class Hero extends Component {
     const showable = this.state.load ? style.showable : null;
     return (
       <div class={classJoin(style.fullHeight, style.content, showable, style.nodersLogo)}>
-        <img src={image} />
+        <img alt="Logo Noders" src={image} />
         <h1 >¿Por qué? Porque nos gusta</h1>
         <a href="https://fforres.typeform.com/to/z2Rj7z"
           class={classJoin('button', 'is-success', 'is-large', style.mainButtonCta)}>

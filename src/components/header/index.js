@@ -6,7 +6,7 @@ const Header = () => (
   <header class={style.header}>
     <nav class={style.nav}>
       <a aria-label="Sitio Web Noders" class={style.active} href="#home">
-        <img src={Icon} class={style.logoIcon} />
+        <img src={Icon} alt="Logo Noders" class={style.logoIcon} />
       </a>
       <a href="#eventos">Eventos</a>
       <a href="#media">Media</a>
