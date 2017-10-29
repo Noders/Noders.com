@@ -15,8 +15,8 @@ const Media = () => (
       <div class={classJoin('level', 'section-content')}>
         <div className="level-item has-text-centered">
           <figure>
-            <a href="https://www.youtube.com/channel/UC7tUsO3S7424TMcgSCUOCow/feed" target="_blank" rel="noopener" className={style}>
-              <img src={nodersYoutube} class={style.image} alt="Canal de YouTube de Noders" />
+            <a href="https://www.youtube.com/c/Noders" target="_blank" rel="noopener" className={style}>
+              <img src={nodersYoutube} class={style.image} alt="youtube" />
               <h3 class={style.imageTitle}> YouTube </h3>
             </a>
           </figure>
