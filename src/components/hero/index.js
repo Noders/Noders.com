@@ -4,6 +4,9 @@ import image from '../../assets/noders/noderslogo_2.png';
 import { classJoin } from '../../helpers';
 
 export default class Hero extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.load !== nextState.load;
+  }
   componentDidMount() {
     setTimeout(() => this.setState({ load: true }), 750);
   }
