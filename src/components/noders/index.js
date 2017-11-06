@@ -26,6 +26,9 @@ export default class Noders extends Component {
         noders: this.shuffleArray(data.users)
       }));
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.noders !== nextState.noders;
+  }
   render() {
     return (
       <section className={classJoin('section', style.section)}>
