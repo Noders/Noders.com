@@ -27,10 +27,10 @@ const Footer = () => (
             <a aria-label="GitHub Noders" class={classJoin('icon', style.iconAnchor)} href="https://github.com/noders">
               <i class={classJoin('fa fa-github', style.iconFont)} />
             </a>
-            <a aria-label="Perfil de Twitter de Noders" class={classJoin('icon', style.iconAnchor)} href="https://twitter.com/NodersCL">
+            <a aria-label="Perfil de Twitter de Noders" class={classJoin('icon', style.iconAnchor)} href="https://twitter.com/NodersJS">
               <i class={classJoin('fa fa-twitter', style.iconFont)} />
             </a>
-            <a aria-label="Página de Facebook de Noders" class={classJoin('icon', style.iconAnchor)} href="https://facebook.com/NodersCL">
+            <a aria-label="Página de Facebook de Noders" class={classJoin('icon', style.iconAnchor)} href="https://facebook.com/NodersJS">
               <i class={classJoin('fa fa-facebook', style.iconFont)} />
             </a>
             <a aria-label="Canal de YouTube de Noders" class={classJoin('icon', style.iconAnchor)} href="https://www.youtube.com/c/Noders">
