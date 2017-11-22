@@ -21,7 +21,7 @@ const Footer = () => (
         <div class={'column is-2'} />
         <div class={'column is-4'}>
           <div class={classJoin('content', 'has-text-centered')}>
-            <a aria-label="JavaScript Chile en Meetup.com" class={classJoin('icon', style.iconAnchor)} href="https://www.meetup.com/es/Javascript-Chile/">
+            <a aria-label="JavaScript Chile en Meetup.com" class={classJoin('icon', style.iconAnchor)} href="https://www.meetup.com/NodersJS">
               <i class={classJoin('fa fa-meetup', style.iconFont)} />
             </a>
             <a aria-label="GitHub Noders" class={classJoin('icon', style.iconAnchor)} href="https://github.com/noders">
