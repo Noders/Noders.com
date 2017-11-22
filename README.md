@@ -1,6 +1,6 @@
 # Noders Website
 
-Welcome to the Noders Website repository. You can see the site live here: http://www.noders.com
+Welcome to the Noders Website repository. You can see the site live here: https://www.noders.com
 
 ## How to run
 
