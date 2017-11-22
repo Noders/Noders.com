@@ -28,6 +28,11 @@ const members = [
     username: 'luchosrock',
     image: 'luchosrock.jpeg',
     twitter: 'luismairiu'
+  },
+  {
+    username: 'enBonnet',
+    image: 'bonnet.jpg',
+    twitter: 'enBonnet'
   }
 ];
 
