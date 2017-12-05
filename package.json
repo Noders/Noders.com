@@ -19,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "7",
+    "babel-eslint": "8.0.3",
     "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-preact": "^1.1.6",
@@ -31,7 +31,7 @@
     "if-env": "^1.0.0"
   },
   "dependencies": {
-    "bulma": "0.4.2",
+    "bulma": "0.6.1",
     "eslint-plugin-node": "^5.1.0",
     "gh-pages": "^1.0.0",
     "preact": "^8.1.0",
