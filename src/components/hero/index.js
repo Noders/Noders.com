@@ -9,10 +9,10 @@ export default class Hero extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    window.requestAnimationFrame(() => {
       this.setState({ load: true });
       this.props.onComponentDidMount();
-    }, 750);
+    });
   }
 
   render() {
