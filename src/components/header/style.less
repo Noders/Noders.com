@@ -1,51 +1,52 @@
-@import '~style/helpers';
+@import "../../style/helpers";
 
 .header {
-	position: fixed;
-	width: 100vw;
-	background: fadeout(@dark, 65%);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	z-index: 50;
-	nav {
-		display: flex;
-		justify-content: center;
-		margin: 0;
-		a {
-			position: relative;
-			transition: all 350ms;
-			height: 3.5em;
-			min-width: 6em;
-			text-decoration: none;
-			color: @white;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+  position: fixed;
+  width: 100vw;
+  background: fadeout(@dark, 65%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    a {
+      position: relative;
+      transition: all 350ms;
+      height: 3.5em;
+      min-width: 6em;
+      text-decoration: none;
+      color: @white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-			&:hover, &:active {
-				background: fadeout(@white, 70%);
-			}
+      &:hover,
+      &:active {
+        background: fadeout(@white, 70%);
+      }
 
-			&.active {
-				background: fadeout(@white, 60%);
-			}
+      &.active {
+        background: fadeout(@white, 60%);
+      }
 
-			img {
-				&.logoIcon {
-					height: 70%;
-				}
-			}
-		}
-	}
+      img {
+        &.logoIcon {
+          height: 70%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 560px) {
-	.header {
-		nav {
-			a {
-				min-width: 25%;
-				width: 25%;
-				font-size: 0.8em;
-			}
-		}
-	}
+  .header {
+    nav {
+      a {
+        min-width: 25%;
+        width: 25%;
+        font-size: 0.8em;
+      }
+    }
+  }
 }
