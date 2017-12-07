@@ -7,23 +7,40 @@ export default class Hero extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.load !== nextState.load;
   }
+
   componentDidMount() {
-    setTimeout(() => this.setState({ load: true }), 750);
+    window.requestAnimationFrame(() => {
+      this.setState({ load: true });
+      this.props.onComponentDidMount();
+    });
   }
+
   render() {
     const showable = this.state.load ? style.showable : null;
     return (
-      <div class={classJoin(style.fullHeight, style.content, showable, style.nodersLogo)}>
+      <div
+        class={classJoin(
+          style.fullHeight,
+          style.content,
+          showable,
+          style.nodersLogo
+        )}
+      >
         <img alt="Logo Noders" src={image} />
-        <h1 >¿Por qué? Porque nos gusta</h1>
-        <a href="https://fforres.typeform.com/to/z2Rj7z"
-          class={classJoin('button', 'is-success', 'is-large', style.mainButtonCta)}>
+        <h1>¿Por qué? Porque nos gusta</h1>
+        <a
+          href="https://fforres.typeform.com/to/z2Rj7z"
+          class={classJoin(
+            'button',
+            'is-success',
+            'is-large',
+            style.mainButtonCta
+          )}
+        >
           <span class="icon is-medium">
             <i class="fa fa-slack" />
           </span>
-          <span>
-            Únete a nuestro Slack
-          </span>
+          <span>Únete a nuestro Slack</span>
         </a>
       </div>
     );
