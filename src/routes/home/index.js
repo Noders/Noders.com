@@ -1,12 +1,12 @@
 import { h } from 'preact';
 import style from './style';
-import Hero from '../../components/hero';
-import Events from '../../components/events';
-import Media from '../../components/media';
-import Organizers from '../../components/organizers';
-import Noders from '../../components/noders';
-import CodeOfConduct from '../../components/coc';
-import { classJoin } from '../../helpers';
+import Hero from 'async!../../components/hero';
+import Events from 'async!../../components/events';
+import Media from 'async!../../components/media';
+import Organizers from 'async!../../components/organizers';
+import Noders from 'async!../../components/noders';
+import CodeOfConduct from 'async!../../components/coc';
+import { classJoin } from 'async!../../helpers';
 
 const Home = () => (
   <div class={classJoin(style.home)}>
