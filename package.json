@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
-    "build": "preact build --no-prerender",
+    "build": "preact build --no-prerender --template src/assets/template.html",
     "build:pre-render": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
