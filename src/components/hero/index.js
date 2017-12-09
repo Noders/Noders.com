@@ -4,9 +4,26 @@ import image from '../../assets/noders/noderslogo_2.png';
 import { classJoin } from '../../helpers';
 
 export default class Hero extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heroLoaded: false
+    };
+    document.addEventListener('DOMContentLoaded', this.load);
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.load !== nextState.load;
   }
+
+  load = () => {
+    this.setState({ load: true });
+    this.props.onComponentDidMount();
+  }
+
+  // componentDidMount() {
+  //   window.requestAnimationFrame(this.load);
+  // }
 
   render() {
     const showable = this.state.load ? style.showable : null;
