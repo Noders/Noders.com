@@ -43,5 +43,6 @@ module.exports = {
     "no-var": 2,
     "object-shorthand": 2,
     "prefer-arrow-callback": 2,
+    "import/no-webpack-loader-syntax": 0,
   },
 };
