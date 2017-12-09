@@ -14,7 +14,7 @@ class Home extends Component {
     this.state = {
       heroLoaded: false
     };
-    window.onload = this.renderTheRest;
+    document.addEventListener('DOMContentLoaded', this.renderTheRest);
   }
 
   renderTheRest = () => {
