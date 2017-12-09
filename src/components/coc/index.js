@@ -10,14 +10,16 @@ const CodeOfConduct = () => (
         <hr />
       </div>
       <div className="section-content">
-        <div className={classJoin(style.cocText, 'content', 'has-text-centered')}>
+        <div className={classJoin(style.cocContent, 'content', 'has-text-centered')}>
           <i class={classJoin('icon icon-file-text-o', style.cocIcon)} />
-          <p>
-            Todos nuestros eventos se rigen y respetan este <a href="https://github.com/Noders/code_of_conduct" target="_blank" rel="noopener">Código de Conducta</a>.
-          </p>
-          <p>
-            Si quieres participar de alguno de ellos, te pedimos que lo respetes y que nos ayuden a que otros lo hagan.
-          </p>
+          <div className={classJoin(style.cocText)}>
+            <p>
+              Todos nuestros eventos se rigen y respetan este <a href="https://github.com/Noders/code_of_conduct" target="_blank" rel="noopener">Código de Conducta</a>.
+            </p>
+            <p>
+              Si quieres participar de alguno de ellos, te pedimos que lo respetes y que nos ayuden a que otros lo hagan.
+            </p>
+          </div>
         </div>
       </div>
     </div>
