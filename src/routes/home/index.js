@@ -14,6 +14,7 @@ class Home extends Component {
     this.state = {
       heroLoaded: false
     };
+    window.onload = this.renderTheRest;
   }
 
   renderTheRest = () => {
@@ -27,7 +28,7 @@ class Home extends Component {
 
     return (
       <div class={classJoin(style.home)}>
-        <Hero onComponentDidMount={this.renderTheRest} />
+        <Hero />
         {heroLoaded && (
           <div>
             <Events />
