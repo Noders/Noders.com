@@ -27,7 +27,7 @@ class Home extends Component {
 
     return (
       <div class={classJoin(style.home)}>
-        <Hero />
+        <Hero onComponentDidMount={this.renderTheRest} />
         {heroLoaded && (
           <div>
             <Events />

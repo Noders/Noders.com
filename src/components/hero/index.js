@@ -9,7 +9,6 @@ export default class Hero extends Component {
     this.state = {
       heroLoaded: false
     };
-    document.addEventListener('DOMContentLoaded', this.load);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -21,9 +20,9 @@ export default class Hero extends Component {
     this.props.onComponentDidMount();
   }
 
-  // componentDidMount() {
-  //   window.requestAnimationFrame(this.load);
-  // }
+  componentDidMount() {
+    window.requestAnimationFrame(this.load);
+  }
 
   render() {
     const showable = this.state.load ? style.showable : null;
