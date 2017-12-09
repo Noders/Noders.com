@@ -37,8 +37,8 @@ export default class Hero extends Component {
             style.mainButtonCta
           )}
         >
-          <span class="icon is-medium">
-            <i class="fa fa-slack" />
+          <span class="icon">
+            <i class="icon icon-slack" />
           </span>
           <span>Únete a nuestro Slack</span>
         </a>

@@ -22,19 +22,19 @@ const Footer = () => (
         <div class={'column is-4'}>
           <div class={classJoin('content', 'has-text-centered')}>
             <a aria-label="JavaScript Chile en Meetup.com" class={classJoin('icon', style.iconAnchor)} href="https://www.meetup.com/NodersJS">
-              <i class={classJoin('fa fa-meetup', style.iconFont)} />
+              <i class={classJoin('icon icon-meetup', style.iconFont)} />
             </a>
             <a aria-label="GitHub Noders" class={classJoin('icon', style.iconAnchor)} href="https://github.com/noders">
-              <i class={classJoin('fa fa-github', style.iconFont)} />
+              <i class={classJoin('icon icon-github', style.iconFont)} />
             </a>
             <a aria-label="Perfil de Twitter de Noders" class={classJoin('icon', style.iconAnchor)} href="https://twitter.com/NodersJS">
-              <i class={classJoin('fa fa-twitter', style.iconFont)} />
+              <i class={classJoin('icon icon-twitter', style.iconFont)} />
             </a>
             <a aria-label="Página de Facebook de Noders" class={classJoin('icon', style.iconAnchor)} href="https://facebook.com/NodersJS">
-              <i class={classJoin('fa fa-facebook', style.iconFont)} />
+              <i class={classJoin('icon icon-facebook', style.iconFont)} />
             </a>
             <a aria-label="Canal de YouTube de Noders" class={classJoin('icon', style.iconAnchor)} href="https://www.youtube.com/c/Noders">
-              <i class={classJoin('fa fa-youtube', style.iconFont)} />
+              <i class={classJoin('icon icon-youtube', style.iconFont)} />
             </a>
           </div>
         </div>
