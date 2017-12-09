@@ -8,13 +8,6 @@ export default class Hero extends Component {
     return this.state.load !== nextState.load;
   }
 
-  componentDidMount() {
-    window.requestAnimationFrame(() => {
-      this.setState({ load: true });
-      this.props.onComponentDidMount();
-    });
-  }
-
   render() {
     const showable = this.state.load ? style.showable : null;
     return (
