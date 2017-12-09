@@ -1,14 +1,10 @@
+// const unCssPlugin = require('postcss-uncss');
 export default function (config, env, helpers) {
-  /** you can change config here **/
 
-  // const loaders = helpers.getLoaders(config);
-  // console.log('LOADERS');
-  // console.log(require('util').inspect(loaders[9], { showHidden: true, depth: null, color: true }))
-
-  // babelConfig.plugins.push('my-chosen-plugin');
-
-  // console.log('env');
-  // console.log(env)
-  // console.log('helpers');
-  // console.log(helpers)
+  // const postCssLoader = helpers.getLoadersByName(config, 'postcss-loader')[1];
+  // const postCssOptionsPlugins = postCssLoader.rule.loader[3].options.plugins;
+  // postCssOptionsPlugins.push(unCssPlugin({
+  //   html: ['index.html']
+  // }))
+  // console.log(require('util').inspect(postCssOptionsPlugins, { showHidden: true, depth: null, color: true }))
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
-    "build": "preact build --no-prerender --template src/assets/template.html",
+    "build": "preact build --no-prerender --template src/assets/template.html && npm run post-build",
+    "post-build": "uncss -H ./build ./build/index.html > ./build/processed_style.css",
     "build:pre-render": "preact build",
     "serve": "preact build --template src/assets/template.html && preact serve",
     "dev": "preact watch",
@@ -41,6 +42,7 @@
     "preact": "^8.2.6",
     "preact-cli": "^2.1.0",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "uncss": "^0.16.1"
   }
 }
