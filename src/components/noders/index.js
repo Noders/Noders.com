@@ -50,9 +50,9 @@ export default class Noders extends Component {
   }
 
   stopListening = () => {
-    console.log('STOP LISTENING')
     Noders.triggers.forEach(event => {
       window.removeEventListener(event, this.checkComponent)
+      console.log('STOP LISTENING', event);
     });
   }
 
@@ -65,10 +65,9 @@ export default class Noders extends Component {
     const { bottom } = this.containerRef.getBoundingClientRect()
     console.log(bottom - scrollOffset < windowHeight)
     if (bottom - scrollOffset < windowHeight) {
-      console.log('setting!')
       this.setState({
         ready: true
-      })
+      }, this.stopListening)
     }
   }
 
