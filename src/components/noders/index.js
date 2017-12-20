@@ -86,7 +86,7 @@ export default class Noders extends Component {
           </div>
           {ready && (
             <div class={classJoin('level', style.flexContainer, 'section-content')}>
-              {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
+              {this.state.noders.map(member => <Member username={member.username} image={member.image} />)}
             </div>
           )}
         </div>
