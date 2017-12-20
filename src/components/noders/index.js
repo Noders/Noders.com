@@ -4,9 +4,14 @@ import Member from './member';
 import { classJoin } from '../../helpers';
 
 export default class Noders extends Component {
+
+  static triggers = ['scroll', 'resize', 'load'];
+
   constructor (props) {
     super(props);
     this.state = {
+      ready: false,
+      scrollOffset: 150,
       noders: []
     };
   }
@@ -26,21 +31,65 @@ export default class Noders extends Component {
         noders: this.shuffleArray(data.users)
       }));
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.noders !== nextState.noders;
+
+  componentDidMount() {
+    this.startListening();
   }
+
+  componentWillUpdate() {
+    if (this.state.ready) {
+      this.stopListening()
+    }
+  }
+
+  startListening = () => {
+    Noders.triggers.forEach(event => {
+      window.addEventListener(event, this.checkComponent, {passive: true});
+    });
+    this.checkComponent();
+  }
+
+  stopListening = () => {
+    console.log('STOP LISTENING')
+    Noders.triggers.forEach(event => {
+      window.removeEventListener(event, this.checkComponent)
+    });
+  }
+
+  checkComponent = (e) => {
+    const { scrollOffset } = this.state;
+    if (!this.containerRef) {
+      return null;
+    }
+    const windowHeight = window.outerHeight;
+    const { bottom } = this.containerRef.getBoundingClientRect()
+    console.log(bottom - scrollOffset < windowHeight)
+    if (bottom - scrollOffset < windowHeight) {
+      console.log('setting!')
+      this.setState({
+        ready: true
+      })
+    }
+  }
+
   render() {
+    const { ready } = this.state;
     return (
-      <section className={classJoin('section', style.section)}>
+      <section
+        ref={c => { this.containerRef = c }}
+        className={classJoin('section', style.section)}
+      >
         <div className="container">
           <a name="comunidad" />
           <div className="section-title">
             <h1 className="title">Comunidad</h1>
             <hr />
           </div>
-          <div class={classJoin('level', style.flexContainer, 'section-content')}>
-            {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
-          </div>
+          {ready && (
+            <div class={classJoin('level', style.flexContainer, 'section-content')}>
+              {this.state.noders.map(member => <Member username={member.username} image={member.images.image_192} />)}
+            </div>
+          )}
         </div>
 
       </section>
