@@ -38,7 +38,7 @@ export default class Noders extends Component {
   }
 
   startListening = () => {
-    if (!this.state.ready) {
+    if (this.state.ready) {
       return;
     }
     Noders.triggers.forEach(event => {
