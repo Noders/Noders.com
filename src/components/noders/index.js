@@ -4,7 +4,6 @@ import Member from './member';
 import { classJoin } from '../../helpers';
 
 export default class Noders extends Component {
-
   static triggers = ['scroll', 'resize', 'load'];
 
   constructor (props) {
@@ -15,6 +14,7 @@ export default class Noders extends Component {
       noders: []
     };
   }
+
   shuffleArray = (oldArray) => {
     const array = [...oldArray];
     for (let i = array.length - 1; i > 0; i--) {
@@ -25,6 +25,7 @@ export default class Noders extends Component {
     }
     return array;
   }
+
   componentWillMount() {
     import('./data.json')
       .then(data => this.setState({
@@ -36,13 +37,10 @@ export default class Noders extends Component {
     this.startListening();
   }
 
-  componentWillUpdate() {
-    if (this.state.ready) {
-      this.stopListening()
-    }
-  }
-
   startListening = () => {
+    if (!this.state.ready) {
+      return;
+    }
     Noders.triggers.forEach(event => {
       window.addEventListener(event, this.checkComponent, {passive: true});
     });
@@ -52,18 +50,16 @@ export default class Noders extends Component {
   stopListening = () => {
     Noders.triggers.forEach(event => {
       window.removeEventListener(event, this.checkComponent)
-      console.log('STOP LISTENING', event);
     });
   }
 
-  checkComponent = (e) => {
+  checkComponent = () => {
     const { scrollOffset } = this.state;
     if (!this.containerRef) {
       return null;
     }
     const windowHeight = window.outerHeight;
     const { bottom } = this.containerRef.getBoundingClientRect()
-    console.log(bottom - scrollOffset < windowHeight)
     if (bottom - scrollOffset < windowHeight) {
       this.setState({
         ready: true
