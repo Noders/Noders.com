@@ -1,33 +1,31 @@
-@import '~style/helpers';
+@import "../../style/helpers";
 
 .fullHeight {
-	display: flex;
-	height: 100vh;
-	width: 100vw;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .content {
-	opacity: 0;
-	padding: 1em;
-	z-index: 1;
-	transition: all 1750ms;
-	img {
-		max-width: 100%;
-	}
-	h1 {
-		color: white;
-		text-align: center;
-		font-size: 2em;
-	}
-	&.showable {
-		opacity: 1;
-	}
+  opacity: 0;
+  padding: 0;
+  z-index: 1;
+  transition: all 1750ms;
+  img {
+    max-width: 100%;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+  }
+  &.showable {
+    opacity: 1;
+  }
 }
-
 
 .nodersLogo {
   z-index: 20;
@@ -35,7 +33,7 @@
 
 .mainButtonCta {
   margin-top: 30px;
-  background-color: #82CD27 !important;
+  background-color: #82cd27 !important;
   color: @dark !important;
   &:hover {
     background-color: #73b71f !important;
