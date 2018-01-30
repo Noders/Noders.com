@@ -36,6 +36,9 @@ const Footer = () => (
             <a aria-label="Canal de YouTube de Noders" class={classJoin('icon', style.iconAnchor)} href="https://www.youtube.com/c/Noders">
               <i class={classJoin('icon icon-youtube', style.iconFont)} />
             </a>
+            <a aria-label="Publicación de Medium de Noders" class={classJoin('icon', style.iconAnchor)} href="https://www.medium.com/Noders">
+              <i class={classJoin('icon icon-medium', style.iconFont)} />
+            </a>
           </div>
         </div>
         <div class={'column is-4'}>
