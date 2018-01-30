@@ -43,13 +43,13 @@
   vertical-align: top;
 }
 
-.icon-noumsolo:before {
+.icon-file-text-o:before {
   content: "\61";
 }
-.icon-file-text-o:before {
+.icon-meetup:before {
   content: "\62";
 }
-.icon-meetup:before {
+.icon-medium:before {
   content: "\63";
 }
 .icon-github:before {
