@@ -17,6 +17,47 @@
 .isLastRowEven {
   padding-right: 100px;
 }
+
+.hexagon {
+  transition: transform 150ms, opacity 150ms;
+  .hexTop {
+    transition: opacity 150ms;
+  }
+  .hexBottom {
+    transition: opacity 150ms;
+  }
+}
+
+.hexagonContainer:hover {
+  .hexagon {
+    transform: scale(1.5, 1.5);
+    z-index: 0;
+    opacity: 0;
+  }
+  .backgroundText {
+    opacity: 1;
+  }
+}
+
+.backgroundText {
+  transition: opacity 250ms;
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  pointer-events: none;
+  word-wrap: break-word;
+  max-width: 90%;
+  text-align: center;
+}
+
+.hexagonContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .nodersRow {
     margin-top: -23px;

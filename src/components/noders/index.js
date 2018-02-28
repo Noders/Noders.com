@@ -5,6 +5,7 @@ import { classJoin } from '../../helpers';
 
 export default class Noders extends Component {
   static triggers = ['scroll', 'resize', 'load'];
+  static scrollOffset = 150;
 
   constructor(props) {
     super(props);
@@ -12,7 +13,8 @@ export default class Noders extends Component {
       ready: false,
       scrollOffset: 150,
       noders: [],
-      hexagons: []
+      hexagons: [],
+      selectedIndex: -1
     };
   }
 
@@ -60,20 +62,18 @@ export default class Noders extends Component {
   };
 
   checkComponent = () => {
-    const { scrollOffset } = this.state;
+    const { scrollOffset } = Noders;
     if (!this.containerRef) {
       return null;
     }
     const windowHeight = window.outerHeight;
     const { bottom } = this.containerRef.getBoundingClientRect();
     if (bottom - scrollOffset < windowHeight) {
-      this.setState(
-        {
-          ready: true
-        },
-      );
+      this.setState({
+        ready: true
+      });
     }
-    this.recalculateHexagons()
+    this.recalculateHexagons();
   };
 
   recalculateHexagons = () => {
@@ -85,12 +85,15 @@ export default class Noders extends Component {
     const evenRow = Math.floor(this.state.width / this.state.hexagonWidth);
     const oddRow = evenRow - 1;
 
-    this.setState({
-      hexagonWidth,
-      width,
-      evenRow,
-      oddRow
-    }, this.renderHexagons);
+    this.setState(
+      {
+        hexagonWidth,
+        width,
+        evenRow,
+        oddRow
+      },
+      this.renderHexagons
+    );
   };
 
   getHexagonsWidth = () => {
@@ -107,27 +110,34 @@ export default class Noders extends Component {
     return 60;
   };
 
+  changeSelectedIndex = (selectedIndex) => {
+    this.setState({ selectedIndex }, this.renderHexagons)
+  }
   renderHexagons = () => {
-    console.log('renderHexagons')
     const hexagons = [];
-    const { evenRow, oddRow, noders } = this.state;
-
+    const { evenRow, oddRow, noders, selectedIndex } = this.state;
     let isEvenRow = false;
     let currentNode = [];
     if (!evenRow || !oddRow) {
       return;
     }
     noders.forEach((member, index) => {
-      let currentRowWidth = isEvenRow ? evenRow : oddRow;
+      const currentRowWidth = isEvenRow ? evenRow : oddRow;
+      const isSelected = index === selectedIndex;
       if (currentNode.length === currentRowWidth) {
         isEvenRow = !isEvenRow;
         hexagons.push(
-          <div className={style.nodersRow}>{[...currentNode]}</div>
+          <div className={style.nodersRow}>
+            {[...currentNode]}
+          </div>
         );
         currentNode = [];
       }
+
       currentNode.push(
         <Member
+          onClick={() => this.changeSelectedIndex(index)}
+          selectedIndex={isSelected}
           username={member.username}
           image={member.image}
           id={`${index}-${hexagons.length}`}
@@ -146,8 +156,7 @@ export default class Noders extends Component {
       );
       hexagons.push(<div className={lastRowClasses}>{[...currentNode]}</div>);
     }
-    console.log(hexagons)
-    this.setState({hexagons});
+    this.setState({ hexagons });
   };
 
   render() {
