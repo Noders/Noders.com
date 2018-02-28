@@ -4,10 +4,7 @@ import { classJoin } from '../../helpers';
 
 export default class Member extends Component {
   render() {
-    const { image, username, id, onClick, selectedIndex } = this.props;
-    if (selectedIndex) {
-      console.log(this.props)
-    }
+    const { image, username, id, onClick } = this.props;
     return (
       <div className={style.hexagonContainer}>
         <div

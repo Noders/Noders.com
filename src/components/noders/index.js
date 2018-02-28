@@ -13,8 +13,7 @@ export default class Noders extends Component {
       ready: false,
       scrollOffset: 150,
       noders: [],
-      hexagons: [],
-      selectedIndex: -1
+      hexagons: []
     };
   }
 
@@ -82,7 +81,8 @@ export default class Noders extends Component {
     }
     const hexagonWidth = this.getHexagonsWidth();
     const { width } = this.hexagonsRef.getBoundingClientRect();
-    const evenRow = Math.floor(this.state.width / this.state.hexagonWidth);
+    console.log('width', width)
+    const evenRow = Math.floor(this.state.width / this.state.hexagonWidth) - 1;
     const oddRow = evenRow - 1;
 
     this.setState(
@@ -109,13 +109,9 @@ export default class Noders extends Component {
     }
     return 60;
   };
-
-  changeSelectedIndex = (selectedIndex) => {
-    this.setState({ selectedIndex }, this.renderHexagons)
-  }
   renderHexagons = () => {
     const hexagons = [];
-    const { evenRow, oddRow, noders, selectedIndex } = this.state;
+    const { evenRow, oddRow, noders } = this.state;
     let isEvenRow = false;
     let currentNode = [];
     if (!evenRow || !oddRow) {
@@ -123,21 +119,16 @@ export default class Noders extends Component {
     }
     noders.forEach((member, index) => {
       const currentRowWidth = isEvenRow ? evenRow : oddRow;
-      const isSelected = index === selectedIndex;
       if (currentNode.length === currentRowWidth) {
         isEvenRow = !isEvenRow;
         hexagons.push(
-          <div className={style.nodersRow}>
-            {[...currentNode]}
-          </div>
+          <div className={style.nodersRow}>{[...currentNode]}</div>
         );
         currentNode = [];
       }
 
       currentNode.push(
         <Member
-          onClick={() => this.changeSelectedIndex(index)}
-          selectedIndex={isSelected}
           username={member.username}
           image={member.image}
           id={`${index}-${hexagons.length}`}
@@ -147,12 +138,13 @@ export default class Noders extends Component {
 
     // Si hay exagonos que no se han agregado al array, agregarlos
     if (currentNode.length) {
-      const isLastRowEven =
-        currentNode.length % 2 === 0 &&
-        hexagons[hexagons.length - 1].length % 2 === 0; // si la ultima fila es par (o impar) y la anterior tambien es par (o impar) , agregar un padding para 'finjir' otro elemento, y que el css se encargue de hacer caer loshexagonos correctamente
+      const isPreviousRowEven = hexagons[hexagons.length - 1].children.length % 2 === 0;
+      const isLastRowEven = currentNode.length % 2 === 0;
+      const shouldAddFakeHexagon = isPreviousRowEven && isLastRowEven;
+      // Si la ultima fila es par (o impar) y la anterior tambien es par (o impar), agregar un padding para 'finjir' otro elemento, y que el css se encargue de hacer caer loshexagonos correctamente
       const lastRowClasses = classJoin(
         style.nodersRow,
-        isLastRowEven && style.isLastRowEven
+        shouldAddFakeHexagon && style.addFakeHexagon
       );
       hexagons.push(<div className={lastRowClasses}>{[...currentNode]}</div>);
     }
@@ -174,7 +166,7 @@ export default class Noders extends Component {
           </div>
           {ready && (
             <div
-              class={classJoin('level', style.flexContainer, 'section-content')}
+              class={classJoin('level', style.flexContainer)}
               ref={c => (this.hexagonsRef = c)}
             >
               {this.state.hexagons}
