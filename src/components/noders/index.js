@@ -82,7 +82,7 @@ export default class Noders extends Component {
     const hexagonWidth = this.getHexagonsWidth();
     const { width } = this.hexagonsRef.getBoundingClientRect();
     console.log('width', width)
-    const evenRow = Math.floor(this.state.width / this.state.hexagonWidth) - 1;
+    const evenRow = Math.floor(this.state.width / this.state.hexagonWidth);
     const oddRow = evenRow - 1;
 
     this.setState(
