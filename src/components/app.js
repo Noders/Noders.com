@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 import Header from './header';
 import Home from '../routes/home';
-import Footer from './footer';
 import ForkMeRibbon from './forkMeRibbon';
 
 export default class App extends Component {
@@ -22,7 +21,6 @@ export default class App extends Component {
         <Router onChange={this.handleRoute}>
           <Home path="/" />
         </Router>
-        <Footer />
         <ForkMeRibbon />
       </div>
     );
