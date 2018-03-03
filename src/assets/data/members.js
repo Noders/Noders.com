@@ -33,6 +33,21 @@ const members = [
     username: 'enBonnet',
     image: 'bonnet.jpg',
     twitter: 'enBonnet'
+  },
+  {
+    username: 'carolina',
+    image: 'carolina.jpg',
+    twitter: 'cps543'
+  },
+  {
+    username: 'nicoavila',
+    image: 'nicolas.jpg',
+    twitter: 'nicoavila_a'
+  },
+  {
+    username: 'taty',
+    image: 'taty.jpg',
+    twitter: 'tatymolys'
   }
 ];
 
