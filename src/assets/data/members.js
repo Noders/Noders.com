@@ -11,7 +11,7 @@ const members = [
   },
   {
     username: 'DMaster69',
-    image: 'dmaster.jpg',
+    image: 'dmaster.jpeg',
     twitter: 'DMaster69'
   },
   {
