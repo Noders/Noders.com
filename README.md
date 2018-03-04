@@ -14,7 +14,6 @@ Welcome to the Noders Website repository. You can see the site live here: https:
 
 5.- Check `http://0.0.0.0:8080` on your browser.
 
-
 ## Contributions
 
 PR's are always welcome! If you find a bug or want to add an improvement, please keep in mind:
@@ -29,18 +28,18 @@ PR's are always welcome! If you find a bug or want to add an improvement, please
 
 We usually review PR's shortly after they're submitted, but if for any reason we haven't after 24 hours, feel free to ping us on Slack or through the same PR.
 
-## Current Lightouse Number
+## Current Lighthouse Score
 
 Lighthouse is an open-source, google-backed, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, and more!
 
 (Install and run here -> https://developers.google.com/web/tools/lighthouse/?hl=es )
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Progressive Web App  | 100 |
-| Performance  | 88  |
-| Accessibility  | 100  |
-| Best Practices  | 94  |
+| First Header        | Second Header |
+| ------------------- | ------------- |
+| Progressive Web App | 100           |
+| Performance         | 88            |
+| Accessibility       | 100           |
+| Best Practices      | 94            |
 
 ## License
 
