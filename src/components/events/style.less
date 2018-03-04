@@ -3,18 +3,27 @@
 .eventImage {
   display: block;
   position: relative;
-  width: 256px;
-  height: 256px;
+  img{
+    width: 85%;
+  }
 }
-
-.centerContent {
-  text-align: center;
+.eventContainer{
+  width: 20%;
 }
-
-.eventLoopLogo {
-  margin-top: 30px;
+@media screen and (max-width: 768px){
+  .eventImage{
+    img{
+      width: 70%;
+    }
+  }
+  .events{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .eventContainer{
+    width: 50%;
+  }
 }
-
 .section {
   background-color: @dark;
 }
