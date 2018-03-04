@@ -5,7 +5,7 @@ import nodersCast from '../../assets/images/noders-cast-200.png';
 import { classJoin } from '../../helpers';
 
 const Media = () => (
-  <section className={classJoin('section', style.section)}>
+  <section className={'section'}>
     <div className="container">
       <a name="media" />
       <div className="section-title">

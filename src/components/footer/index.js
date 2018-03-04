@@ -3,7 +3,7 @@ import style from './style';
 import { classJoin } from '../../helpers';
 
 const Footer = () => (
-  <footer class={classJoin('footer', style.footerSection)}>
+  <footer class={'footer'}>
     <div class={classJoin('container', style.social)}>
       <div class={classJoin('content has-text-centered', style.disclaimer)}>
         <p>

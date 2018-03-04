@@ -72,7 +72,7 @@ export default class Noders extends Component {
     return (
       <section
         ref={c => { this.containerRef = c }}
-        className={classJoin('section', style.section)}
+        className={'section'}
       >
         <div className="container">
           <a name="comunidad" />
