@@ -81,8 +81,12 @@ export default class Noders extends Component {
     }
     const hexagonWidth = this.getHexagonsWidth();
     const { width } = this.hexagonsRef.getBoundingClientRect();
-    console.log('width', width)
-    const evenRow = Math.floor(this.state.width / this.state.hexagonWidth);
+    console.log('width', width, hexagonWidth);
+    let evenRow = Math.floor(width / hexagonWidth) - 1;
+
+    if (width < 833 && width > 613) {
+      evenRow = evenRow - 1;
+    }
     const oddRow = evenRow - 1;
 
     this.setState(
@@ -138,7 +142,8 @@ export default class Noders extends Component {
 
     // Si hay exagonos que no se han agregado al array, agregarlos
     if (currentNode.length) {
-      const isPreviousRowEven = hexagons[hexagons.length - 1].children.length % 2 === 0;
+      const isPreviousRowEven =
+        hexagons[hexagons.length - 1].children.length % 2 === 0;
       const isLastRowEven = currentNode.length % 2 === 0;
       const shouldAddFakeHexagon = isPreviousRowEven && isLastRowEven;
       // Si la ultima fila es par (o impar) y la anterior tambien es par (o impar), agregar un padding para 'finjir' otro elemento, y que el css se encargue de hacer caer loshexagonos correctamente
