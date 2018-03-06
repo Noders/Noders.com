@@ -31,9 +31,9 @@ class Home extends Component {
         {heroLoaded && (
           <div>
             <Events />
-            <Media />
-            <Organizers />
+            <Media />            
             <Noders />
+            <Organizers />
             <CodeOfConduct />
           </div>
         )}
