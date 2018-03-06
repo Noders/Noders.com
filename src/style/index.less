@@ -1,43 +1,59 @@
-@import 'helpers';
+@import "helpers";
 
 html {
-  background: @noders url(../assets/noders/bg3-min.jpg);
-	background-size: cover;
+  background: @noders url(../assets/noders/background.svg);
+  background-size: cover;
   background-attachment: fixed;
   overflow-y: auto !important;
   overflow-x: inherit;
 }
 
 body {
-  background-color: @dark;
   opacity: 0.9;
   z-index: 2;
   width: 100%;
   height: 100%;
 }
 
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+body:after{
+  position:fixed;
+  content:"";
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: @darktransparent;
+  z-index:-1;
 }
 
+footer.footer {
+  background-color: transparent
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+}
 
 ::selection {
   background: @noders; /* WebKit/Blink Browsers */
 }
 
-
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 .section-container {
   padding: 1em;

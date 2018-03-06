@@ -3,7 +3,7 @@ import style from './style';
 import { classJoin } from '../../helpers';
 
 const CodeOfConduct = () => (
-  <section className={classJoin('section', style.section)}>
+  <section className={'section'}>
     <div className="container">
       <div className="section-title">
         <h1 className="title">Código de Conducta</h1>

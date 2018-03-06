@@ -6,7 +6,7 @@ import Media from 'async!../../components/media';
 import Organizers from 'async!../../components/organizers';
 import Noders from 'async!../../components/noders';
 import CodeOfConduct from 'async!../../components/coc';
-import { classJoin } from '../../helpers';
+import Footer from '../../components/footer';
 
 class Home extends Component {
   constructor(props) {
@@ -26,17 +26,16 @@ class Home extends Component {
     const { heroLoaded } = this.state;
 
     return (
-      <div class={classJoin(style.home)}>
+      <div className={style.home}>
         <Hero onComponentDidMount={this.renderTheRest} />
-        {heroLoaded && (
-          <div>
-            <Events />
-            <Media />            
-            <Noders />
-            <Organizers />
-            <CodeOfConduct />
-          </div>
-        )}
+        {heroLoaded && [
+          <Events />,
+          <Media />,
+          <Organizers />,
+          <Noders />,
+          <CodeOfConduct />
+        ]}
+        <Footer />
       </div>
     );
   }

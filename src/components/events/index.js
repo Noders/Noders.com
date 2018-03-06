@@ -3,7 +3,7 @@ import style from './style';
 import { classJoin } from '../../helpers';
 
 const Events = () => (
-  <section className={classJoin('section', style.section)}>
+  <section className={'section'}>
     <div className="container">
       <a name="eventos" />
       <div className="section-title">
