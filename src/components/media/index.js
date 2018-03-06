@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import style from './style';
-import nodersYoutube from '../../assets/images/noders-youtube-200.png';
-import nodersCast from '../../assets/images/noders-cast-200.png';
+import nodersYoutube from '../../assets/images/youtube-noders.png';
+import nodersCast from '../../assets/images/podcast-noders.png';
 import { classJoin } from '../../helpers';
 
 const Media = () => (
