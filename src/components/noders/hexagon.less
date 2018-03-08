@@ -1,0 +1,145 @@
+// Calculated in http://csshexagon.com
+// Breakpoints are:
+// > 768px = 100px
+// 768px > 425px = 80px
+// < 425px = 60px
+
+// Copy paste different sizes from here :)
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-size: auto 115.4701px;
+  background-position: center;
+  margin: 35px 5px;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 57.73502691896258px;
+  transform: rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -35.3553px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -35.3553px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100px;
+  height: 57.735px;
+  z-index: 2;
+  background: inherit;
+}
+
+@media (max-width: 768px) {
+  .hexagon {
+    width: 80px;
+    height: 46.19px;
+    background-size: auto 92.376px;
+    margin: 28px 4px;
+  }
+
+  .hexTop,
+  .hexBottom {
+    width: 56.57px;
+    height: 56.57px;
+    overflow: hidden;
+    transform: scaleY(0.5774) rotate(-45deg);
+    left: 11.72px;
+  }
+
+  /*counter transform the bg image on the caps*/
+  .hexTop:after,
+  .hexBottom:after {
+    width: 80px;
+    height: 46.188021535170066px;
+    transform: rotate(45deg) scaleY(1.7321) translateY(-23.094px);
+  }
+
+  .hexTop {
+    top: -28.2843px;
+  }
+
+  .hexBottom {
+    bottom: -28.2843px;
+  }
+
+  .hexagon:after {
+    width: 80px;
+    height: 46.188px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hexagon {
+    width: 60px;
+    height: 34.64px;
+    margin: 21px 3px;
+    background-size: auto 69.282px;
+  }
+
+  .hexTop,
+  .hexBottom {
+    width: 42.43px;
+    height: 42.43px;
+    overflow: hidden;
+    transform: scaleY(0.5774) rotate(-45deg);
+    left: 8.79px;
+  }
+
+  /*counter transform the bg image on the caps*/
+  .hexTop:after,
+  .hexBottom:after {
+    width: 60px;
+    height: 34.64101615137755px;
+    transform: rotate(45deg) scaleY(1.7321) translateY(-17.3205px);
+  }
+
+  .hexTop {
+    top: -21.2132px;
+  }
+
+  .hexBottom {
+    bottom: -21.2132px;
+  }
+
+  .hexagon:after {
+    width: 60px;
+    height: 34.641px;
+  }
+}

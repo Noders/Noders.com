@@ -1,10 +1,82 @@
 @import "../../style/helpers";
+@import "./hexagon";
 
 .container {
   padding: 1em;
 }
 .flexContainer {
   display: flex;
-  flex-flow: wrap;
+  flex-direction: column;
+  margin-top: 6em;
+  margin-bottom: 30px;
+}
+.nodersRow {
+  display: flex;
+  flex: 1;
+  justify-content: flex-center;
+  margin-top: -30px;
+}
+.addFakeHexagon {
+  padding-right: 100px;
+}
+
+.hexagon {
+  user-select: none;
+  transition: transform 150ms, opacity 150ms;
+  .hexTop {
+    transition: opacity 150ms;
+  }
+  .hexBottom {
+    transition: opacity 150ms;
+  }
+}
+
+.hexagonContainer:hover {
+  .hexagon {
+    transform: scale(1.5, 1.5);
+    z-index: 0;
+    opacity: 0;
+  }
+  .backgroundText {
+    opacity: 1;
+  }
+}
+
+.backgroundText {
+  transition: opacity 250ms;
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  pointer-events: none;
+  word-wrap: break-word;
+  max-width: 90%;
+  text-align: center;
+}
+
+.hexagonContainer {
+  outline: none !important;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .nodersRow {
+    margin-top: -23px;
+  }
+  .addFakeHexagon {
+    padding-right: 80px;
+  }
+}
+@media (max-width: 425px) {
+  .nodersRow {
+    margin-top: -18px;
+  }
+  .addFakeHexagon {
+    padding-right: 60px;
+  }
 }
