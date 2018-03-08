@@ -31,8 +31,8 @@ class Home extends Component {
         {heroLoaded && [
           <Events />,
           <Media />,
-          <Organizers />,
           <Noders />,
+          <Organizers />,
           <CodeOfConduct />
         ]}
         <Footer />
