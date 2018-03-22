@@ -7,7 +7,7 @@
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "build": "preact build --no-prerender --template src/assets/template.html && npm run post-build",
-    "post-build": "uncss -H ./build ./build/index.html > ./build/processed_style.css",
+    "postbuild": "copy ./static/* ./build",
     "build:pre-render": "preact build",
     "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
     "dev": "preact watch",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "bulma": "0.6.1",
+    "copy": "^0.3.1",
     "eslint-plugin-node": "^5.2.1",
     "gh-pages": "^1.1.0",
     "less": "^2.7.3",
@@ -42,7 +43,6 @@
     "preact": "^8.2.6",
     "preact-cli": "^2.1.0",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.6.0",
-    "uncss": "^0.16.1"
+    "preact-router": "^2.6.0"
   }
 }
