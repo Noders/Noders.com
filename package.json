@@ -7,7 +7,7 @@
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "build": "preact build --no-prerender --template src/assets/template.html && npm run post-build",
-    "postbuild": "copy ./static/* ./build",
+    "post-build": "cp ./static/* ./build",
     "build:pre-render": "preact build",
     "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
     "dev": "preact watch",
@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "bulma": "0.6.1",
-    "copy": "^0.3.1",
     "eslint-plugin-node": "^5.2.1",
     "gh-pages": "^1.1.0",
     "less": "^2.7.3",
