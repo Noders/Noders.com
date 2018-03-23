@@ -37,6 +37,7 @@
     "bulma": "0.6.1",
     "eslint-plugin-node": "^5.2.1",
     "gh-pages": "^1.1.0",
+    "intersection-observer": "^0.5.0",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "preact": "^8.2.6",

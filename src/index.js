@@ -1,3 +1,4 @@
+import './helpers/intersectionObserver';
 import './style';
 import './assets/fonts/styles.css';
 import 'bulma/css/bulma.css';
