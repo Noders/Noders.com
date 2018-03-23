@@ -1,25 +1,26 @@
 import { h, Component } from 'preact';
 
 class Picture extends Component {
-  render() {
-    const { imageName, alt, folder, ...props } = this.props;
+  extensions = ['webp', 'jpg', 'png']
+
+  renderSources = () => {
+    const { imageName, folder } = this.props;
     const folderRoute = folder ? `${folder}/` : '';
+    return Picture.extensions.map(extension => {
+      return (
+        <source
+          srcset={`../../assets/images/${folderRoute}${imageName}.${extension}`}
+          type={`image/${extension}`}
+        />
+      )
+    })
+  }
+  render() {
+    const { className } = this.props;
     return (
-      <div {...props}>
+      <div className={className}>
         <picture>
-          <source
-            srcset={`../../assets/images/${folderRoute}${imageName}.webp`}
-            type="image/webp"
-          />
-          <source
-            srcset={`../../assets/images/${folderRoute}${imageName}.png`}
-            type="image/webp"
-          />
-          <img
-            src={`../../assets/images/${folderRoute}${imageName}.png`}
-            type="image/webp"
-            alt={alt}
-          />
+          { this.renderSources() }
         </picture>
       </div>
     );

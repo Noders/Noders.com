@@ -11,7 +11,7 @@ const Media = () => (
         <h1 className="title">Media</h1>
         <hr />
       </div>
-      <div class={classJoin('level', 'section-content')}>
+      <div className={classJoin('level', 'section-content')}>
         <div className="level-item has-text-centered">
           <figure>
             <a
@@ -22,10 +22,10 @@ const Media = () => (
             >
               <Picture
                 imageName={'youtube-noders'}
-                class={style.image}
+                className={style.image}
                 alt="youtube"
               />
-              <h3 class={style.imageTitle}> YouTube </h3>
+              <h3 className={style.imageTitle}> YouTube </h3>
             </a>
           </figure>
         </div>
@@ -39,10 +39,10 @@ const Media = () => (
             >
               <Picture
                 imageName={'podcast-noders'}
-                class={style.image}
+                className={style.image}
                 alt="youtube"
               />
-              <h3 class={style.imageTitle}> NodersCast </h3>
+              <h3 className={style.imageTitle}> NodersCast </h3>
             </a>
           </figure>
         </div>
