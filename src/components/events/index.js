@@ -11,31 +11,81 @@ const Events = () => (
         <hr />
       </div>
       <div class={classJoin('level', 'section-content', style.events)}>
-        <div className={classJoin("level-item has-text-centered", style.eventContainer)}>
+        <div
+          className={classJoin(
+            'level-item has-text-centered',
+            style.eventContainer
+          )}
+        >
           <figure className={style.eventImage}>
-            <a href="https://twitter.com/BurgerJSStgo" target="_blank" rel="noopener">
-              <img src="../../assets/images/burgerjs.png" alt="burgerjssantiago" />
+            <a
+              href="https://twitter.com/BurgerJSStgo"
+              target="_blank"
+              rel="noopener"
+            >
+              <picture>
+                <source srcset="img/awesomeWebPImage.webp" type="image/webp" />
+                <source
+                  srcset="../../assets/images/burgerjs.png"
+                  type="image/jpeg"
+                />
+                <img src="../../assets/images/burgerjs.png" alt="Alt Text!" />
+              </picture>
             </a>
           </figure>
         </div>
-        <div className={classJoin("level-item has-text-centered", style.eventContainer)}>
+        <div
+          className={classJoin(
+            'level-item has-text-centered',
+            style.eventContainer
+          )}
+        >
           <figure className={style.eventImage}>
-            <a href="https://github.com/Noders/Meetups" target="_blank" rel="noopener">
+            <a
+              href="https://github.com/Noders/Meetups"
+              target="_blank"
+              rel="noopener"
+            >
               <img src="../../assets/images/meetupsjs.png" alt="santiagojs" />
             </a>
           </figure>
-        </div>        
-        <div className={classJoin("level-item has-text-centered", style.eventContainer)}>
+        </div>
+        <div
+          className={classJoin(
+            'level-item has-text-centered',
+            style.eventContainer
+          )}
+        >
           <figure className={style.eventImage}>
-            <a href="https://github.com/nodeschool/santiago" target="_blank" rel="noopener">
-              <img src="../../assets/images/nodeschool.png" alt="nodeschoolsantiago" />
+            <a
+              href="https://github.com/nodeschool/santiago"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../../assets/images/nodeschool.png"
+                alt="nodeschoolsantiago"
+              />
             </a>
           </figure>
         </div>
-        <div className={classJoin("level-item has-text-centered", style.eventContainer)}>
+        <div
+          className={classJoin(
+            'level-item has-text-centered',
+            style.eventContainer
+          )}
+        >
           <figure className={style.eventImage}>
-            <a href="https://github.com/Noders/eventloop" target="_blank" rel="noopener">
-              <img src="../../assets/images/eventloop.png" alt="eventloop" className={style.eventLoopLogo} />
+            <a
+              href="https://github.com/Noders/eventloop"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../../assets/images/eventloop.png"
+                alt="eventloop"
+                className={style.eventLoopLogo}
+              />
             </a>
           </figure>
         </div>
