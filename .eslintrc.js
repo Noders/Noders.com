@@ -44,5 +44,8 @@ module.exports = {
     'object-shorthand': 2,
     'prefer-arrow-callback': 2,
     'import/no-webpack-loader-syntax': 0
+  },
+  globals: {
+    IntersectionObserver: true
   }
 };
