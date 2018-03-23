@@ -3,6 +3,19 @@ import style from './style';
 import members from '../../assets/data/members';
 import { classJoin } from '../../helpers';
 
+let getOrganizerSocial = (member) => {
+  if (member.github) {
+    return {
+      label: `Perfil de Github de ${member.github}`,
+      href: `https://github.com/${member.github}`
+    }
+  }
+  return {
+    label: `Perfil de Twitter de ${member.twitter}`,
+    href: `https://twitter.com/${member.twitter}`
+  }
+}
+
 const Organizers = () => (
   <section className={classJoin('section', style.section)}>
     <div className="container">
@@ -15,8 +28,8 @@ const Organizers = () => (
         {members.map((member) =>
           (<div className={classJoin('level-item', 'has-text-centered', style.organizer)}>
             <figure>
-              <a target="_blank" aria-label={`Perfil de Twitter de ${member.twitter}`} href={member.twitter ? `https://twitter.com/${member.twitter}` : `https://github.com/${member.github}`} rel="noopener"><img src={`../../assets/images/organizers/${member.image}`} alt={`Perfil de Twitter de ${member.twitter}`} className={style.memberImage} /></a>
-              <p className={style.memberInfo}><a href={member.twitter ? `https://twitter.com/${member.twitter}` : `https://github.com/${member.github}`}>@{member.username}</a></p>
+              <a target="_blank" aria-label={getOrganizerSocial(member).label} href={getOrganizerSocial(member).href} rel="noopener"><img src={`../../assets/images/organizers/${member.image}`} alt={getOrganizerSocial(member).label} className={style.memberImage} /></a>
+              <p className={style.memberInfo}><a href={getOrganizerSocial(member).href}>@{member.username}</a></p>
             </figure>
           </div>)
         )}
