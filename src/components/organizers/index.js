@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import style from './style';
-import members from '../../assets/data/members';
+import members from './members';
 import { classJoin } from '../../helpers';
 import Picture from '../picture';
 
