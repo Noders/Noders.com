@@ -11,10 +11,6 @@ export default class Hero extends Component {
     };
   }
 
-  componentWillMount() {
-    window.addEventListener('load', this.load);
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return this.state.load !== nextState.load;
   }
@@ -25,7 +21,6 @@ export default class Hero extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener('load', this.load);
     window.requestAnimationFrame(this.load);
   }
 
