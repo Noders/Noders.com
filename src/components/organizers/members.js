@@ -1,37 +1,37 @@
 const members = [
   {
     username: 'fforres',
-    image: 'fforres',
+    image: 'fforres.jpg',
     twitter: 'fforres'
   },
   {
     username: 'Xabadu',
-    image: 'xabadu',
+    image: 'xabadu.jpg',
     twitter: 'xabadu'
   },
   {
     username: 'DMaster69',
-    image: 'dmaster',
+    image: 'dmaster.jpg',
     twitter: 'DMaster69'
   },
   {
     username: 'cristofer-dev',
-    image: 'cristofer',
+    image: 'cristofer.jpg',
     twitter: 'cristofer_dev'
   },
   {
     username: 'L0rdKras',
-    image: 'lordkras',
+    image: 'lordkras.jpg',
     twitter: 'L0rdKras'
   },
   {
     username: 'luchosrock',
-    image: 'luchosrock',
+    image: 'luchosrock.jpg',
     twitter: 'luismairiu'
   },
   {
     username: 'enBonnet',
-    image: 'bonnet',
+    image: 'bonnet.jpg',
     twitter: 'enBonnet'
   },
   {
@@ -41,12 +41,12 @@ const members = [
   },
   {
     username: 'nicoavila',
-    image: 'nicolas',
+    image: 'nicolas.jpg',
     twitter: 'nicoavila_a'
   },
   {
     username: 'taty',
-    image: 'taty',
+    image: 'taty.jpg',
     twitter: 'tatymolys'
   }
 ];
