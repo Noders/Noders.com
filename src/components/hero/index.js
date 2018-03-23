@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
-import image from '../../assets/noders/noderslogo_2.png';
 import { classJoin } from '../../helpers';
+import Picture from '../picture';
 
 export default class Hero extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export default class Hero extends Component {
   load = () => {
     this.setState({ load: true });
     this.props.onComponentDidMount();
-  }
+  };
 
   componentDidMount() {
     window.requestAnimationFrame(this.load);
@@ -35,7 +35,7 @@ export default class Hero extends Component {
           style.nodersLogo
         )}
       >
-        <img alt="Logo Noders" src={image} />
+        <Picture alt="Logo Noders" imageName="noderslogo_2" />
         <h1>¿Por qué? Porque nos gusta</h1>
         <a
           href="https://fforres.typeform.com/to/z2Rj7z"
