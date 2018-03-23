@@ -3,9 +3,9 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
 
-  Content-Security-Policy:    default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/* https://www.google-analytics.com/*; style-src https://*.cloudfront.net/* https://*.noders.com/* https://noders.com/*; object-src 'none';
-  X-Content-Security-Policy:  default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/* https://www.google-analytics.com/*; style-src https://*.cloudfront.net/* https://*.noders.com/* https://noders.com/*; object-src 'none';
-  X-WebKit-CSP:               default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/* https://www.google-analytics.com/*; style-src https://*.cloudfront.net/* https://*.noders.com/* https://noders.com/*; object-src 'none';
+  Content-Security-Policy:    default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/*/*.js https://www.google-analytics.com/*; style-src https://*.cloudfront.net/*/*.css https://*.noders.com/* https://noders.com/*; object-src 'none';
+  X-Content-Security-Policy:  default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/*/*.js https://www.google-analytics.com/*; style-src https://*.cloudfront.net/*/*.css https://*.noders.com/* https://noders.com/*; object-src 'none';
+  X-WebKit-CSP:               default-src 'self' https://*.noders.com/* https://noders.com/* https://netlify.com/* https://*.netlify.com/* https://*.cloudfront.net/*; script-src 'self' 'unsafe-inline' https://*.cloudfront.net/*/*.js https://www.google-analytics.com/*; style-src https://*.cloudfront.net/*/*.css https://*.noders.com/* https://noders.com/*; object-src 'none';
 
 
 # http://www.cspisawesome.com
