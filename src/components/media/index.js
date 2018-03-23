@@ -21,7 +21,7 @@ const Media = () => (
               className={style}
             >
               <Picture
-                imageName={'youtube-noders'}
+                imageName="youtube-noders.png"
                 className={style.image}
                 alt="youtube"
               />
@@ -38,7 +38,7 @@ const Media = () => (
               className={style}
             >
               <Picture
-                imageName={'podcast-noders'}
+                imageName="podcast-noders.png"
                 className={style.image}
                 alt="youtube"
               />
