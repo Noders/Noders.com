@@ -28,7 +28,6 @@ class Picture extends Component {
     const { imageName, folder, className } = this.props;
     const [image, extension] = imageName.split('.');
     const folderRoute = folder ? `${folder}/` : '';
-    console.log(image, extension)
     return (
       <div className={className}>
         <picture>
