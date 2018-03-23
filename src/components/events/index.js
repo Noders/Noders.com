@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import style from './style';
 import { classJoin } from '../../helpers';
+import Picture from '../picture';
 
 const Events = () => (
   <section className={'section'}>
@@ -23,14 +24,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <picture>
-                <source srcset="img/awesomeWebPImage.webp" type="image/webp" />
-                <source
-                  srcset="../../assets/images/burgerjs.png"
-                  type="image/jpeg"
-                />
-                <img src="../../assets/images/burgerjs.png" alt="Alt Text!" />
-              </picture>
+              <Picture imageName="burgerjs" alt="burgerjssantiago" />
             </a>
           </figure>
         </div>
@@ -46,7 +40,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <img src="../../assets/images/meetupsjs.png" alt="santiagojs" />
+              <Picture imageName="meetupsjs" alt="santiagojs" />
             </a>
           </figure>
         </div>
@@ -62,10 +56,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <img
-                src="../../assets/images/nodeschool.png"
-                alt="nodeschoolsantiago"
-              />
+              <Picture imageName="nodeschool" alt="nodeschoolsantiago" />
             </a>
           </figure>
         </div>
@@ -81,11 +72,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <img
-                src="../../assets/images/eventloop.png"
-                alt="eventloop"
-                className={style.eventLoopLogo}
-              />
+              <Picture imageName="eventloop" alt="eventloop" />
             </a>
           </figure>
         </div>
