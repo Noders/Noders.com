@@ -7,8 +7,12 @@ export default class Hero extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heroLoaded: false
+      load: false
     };
+  }
+
+  componentWillMount() {
+    window.addEventListener('load', this.load);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -21,6 +25,7 @@ export default class Hero extends Component {
   };
 
   componentDidMount() {
+    window.addEventListener('load', this.load);
     window.requestAnimationFrame(this.load);
   }
 
