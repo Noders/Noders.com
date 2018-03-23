@@ -18,8 +18,6 @@ class Picture extends Component {
           console.log('in the view');
           this.setState({ load: true });
           observer.unobserve(entry.target);
-        } else {
-          console.log('out of view');
         }
       });
     });
