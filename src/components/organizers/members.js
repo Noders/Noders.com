@@ -37,7 +37,7 @@ const members = [
   {
     username: 'carolina',
     image: 'carolina.jpg',
-    twitter: 'cps543'
+    github: 'carolina-pinzon'
   },
   {
     username: 'nicoavila',
