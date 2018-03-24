@@ -81,7 +81,6 @@ export default class Noders extends Component {
     }
     const hexagonWidth = this.getHexagonsWidth();
     const { width } = this.hexagonsRef.getBoundingClientRect();
-    console.log('width', width, hexagonWidth);
     let evenRow = Math.floor(width / hexagonWidth) - 1;
 
     if (width < 833 && width > 613) {
@@ -160,7 +159,9 @@ export default class Noders extends Component {
     const { ready } = this.state;
     return (
       <section
-        ref={c => { this.containerRef = c }}
+        ref={c => {
+          this.containerRef = c;
+        }}
         className={'section'}
       >
         <div className="container">
