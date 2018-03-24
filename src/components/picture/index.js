@@ -15,23 +15,33 @@ class Picture extends Component {
   }
 
   render() {
-    const { imageName, folder, className } = this.props;
+    const { load } = this.state;
+    const { imageName, folder, alt, className } = this.props;
     const [image, extension] = imageName.split('.');
     const folderRoute = folder ? `${folder}/` : '';
     return (
       <div className={className} ref={c => (this.ref = c)}>
         <picture>
-          <source
-            srcset={`../../assets/images/${folderRoute}${image}.webp`}
-            type="image/webp"
-          />
-          <source
-            srcset={`../../assets/images/${folderRoute}${image}.${extension}`}
-            type={`image/${extension}`}
-          />
-          <img
-            src={`../../assets/images/${folderRoute}${image}.${extension}`}
-          />
+          {load && (
+            <source
+              srcset={`../../assets/images/${folderRoute}${image}.webp`}
+              type="image/webp"
+              alt={alt}
+            />
+          )}
+          {load && (
+            <source
+              srcset={`../../assets/images/${folderRoute}${image}.${extension}`}
+              type={`image/${extension}`}
+              alt={alt}
+            />
+          )}
+          {load && (
+            <img
+              src={`../../assets/images/${folderRoute}${image}.${extension}`}
+              alt={alt}
+            />
+          )}
         </picture>
       </div>
     );
