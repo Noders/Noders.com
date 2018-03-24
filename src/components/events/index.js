@@ -21,6 +21,7 @@ const Events = () => (
           <figure className={style.eventImage}>
             <a
               href="https://twitter.com/BurgerJSStgo"
+              aria-label="Sitio del BurgerJS Santiago"
               target="_blank"
               rel="noopener"
             >
@@ -37,6 +38,7 @@ const Events = () => (
           <figure className={style.eventImage}>
             <a
               href="https://github.com/Noders/Meetups"
+              aria-label="Github para Meetups de NoderJS"
               target="_blank"
               rel="noopener"
             >
@@ -53,6 +55,7 @@ const Events = () => (
           <figure className={style.eventImage}>
             <a
               href="https://github.com/nodeschool/santiago"
+              aria-label="Github para NodeSchool santiago"
               target="_blank"
               rel="noopener"
             >
@@ -69,6 +72,7 @@ const Events = () => (
           <figure className={style.eventImage}>
             <a
               href="https://github.com/Noders/eventloop"
+              aria-label="Github del Eventloop 2016"
               target="_blank"
               rel="noopener"
             >
