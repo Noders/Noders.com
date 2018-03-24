@@ -1,7 +1,10 @@
-import 'intersection-observer';
-import 'async!bulma/css/bulma.css';
+if (typeof window !== 'undefined') {
+  require('intersection-observer');
+}
+
 import './style';
-import 'async!./assets/fonts/styles.css';
+import 'bulma/css/bulma.css';
+import './assets/fonts/styles.css';
 import App from './components/app';
 
 export default App;
