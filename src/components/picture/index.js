@@ -1,13 +1,4 @@
 import { h, Component } from 'preact';
-// const myImg = document.querySelector('.animate-me');
-
-// observer = new IntersectionObserver((entry, observer) => {
-//   console.log('entry:', entry);
-//   console.log('observer:', observer);
-// });
-
-// observer.observe(myImg);
-
 class Picture extends Component {
   state = { load: false };
 
@@ -15,11 +6,8 @@ class Picture extends Component {
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
-          console.log('in the view');
           this.setState({ load: true });
           observer.unobserve(entry.target);
-        } else {
-          console.log('out of view');
         }
       });
     });
