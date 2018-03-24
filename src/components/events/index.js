@@ -24,7 +24,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <Picture imageName="burgerjs" alt="burgerjssantiago" />
+              <Picture imageName="burgerjs.png" alt="burgerjssantiago" />
             </a>
           </figure>
         </div>
@@ -40,7 +40,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <Picture imageName="meetupsjs" alt="santiagojs" />
+              <Picture imageName="meetupsjs.png" alt="santiagojs" />
             </a>
           </figure>
         </div>
@@ -56,7 +56,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <Picture imageName="nodeschool" alt="nodeschoolsantiago" />
+              <Picture imageName="nodeschool.png" alt="nodeschoolsantiago" />
             </a>
           </figure>
         </div>
@@ -72,7 +72,7 @@ const Events = () => (
               target="_blank"
               rel="noopener"
             >
-              <Picture imageName="eventloop" alt="eventloop" />
+              <Picture imageName="eventloop.png" alt="eventloop" />
             </a>
           </figure>
         </div>

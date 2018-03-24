@@ -35,7 +35,7 @@ export default class Hero extends Component {
           style.nodersLogo
         )}
       >
-        <Picture alt="Logo Noders" imageName="noderslogo_2" />
+        <Picture alt="Logo Noders" imageName="noderslogo_2.png" />
         <h1>¿Por qué? Porque nos gusta</h1>
         <a
           href="https://fforres.typeform.com/to/z2Rj7z"
