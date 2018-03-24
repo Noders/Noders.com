@@ -29,7 +29,7 @@ class Picture extends Component {
     const [image, extension] = imageName.split('.');
     const folderRoute = folder ? `${folder}/` : '';
     return (
-      <div className={className}>
+      <div className={className} ref={c => (this.ref = c)}>
         <picture>
           <source
             srcset={`../../assets/images/${folderRoute}${image}.webp`}
