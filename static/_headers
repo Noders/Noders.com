@@ -1,7 +1,8 @@
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
-  X-Content-Type-Options: nosniff
+  X-Content-Type-Options: all
+  X-Robots-Tag: googlebot: nofollow
 
   Content-Security-Policy:    default-src 'none'; script-src 'self' https://*.netlify.com https://*.cloudfront.net https://www.google-analytics.com 'sha256-MvSELxLY9VMaVL66njFnDo2rIveugUrGlJY4Yvs/hsw=' 'sha256-7X8t1W5iGYT9WhzupJ87alr8wl9/NWl4uuGMsoJJ0RM='; img-src 'self' https://www.google-analytics.com https://avatars.slack-edge.com https://*.cloudfront.net; style-src 'unsafe-inline' https://*.cloudfront.net https://*.noders.com https://noders.com; object-src 'none'; form-action 'none'; frame-ancestors 'none'; font-src https://*.cloudfront.net; connect-src 'self' https://www.google-analytics.com https://avatars.slack-edge.com https://*.cloudfront.net https://*.netlify.com; manifest-src 'self';
   X-Content-Security-Policy:  default-src 'none'; script-src 'self' https://*.netlify.com https://*.cloudfront.net https://www.google-analytics.com 'sha256-MvSELxLY9VMaVL66njFnDo2rIveugUrGlJY4Yvs/hsw=' 'sha256-7X8t1W5iGYT9WhzupJ87alr8wl9/NWl4uuGMsoJJ0RM='; img-src 'self' https://www.google-analytics.com https://avatars.slack-edge.com https://*.cloudfront.net; style-src 'unsafe-inline' https://*.cloudfront.net https://*.noders.com https://noders.com; object-src 'none'; form-action 'none'; frame-ancestors 'none'; font-src https://*.cloudfront.net; connect-src 'self' https://www.google-analytics.com https://avatars.slack-edge.com https://*.cloudfront.net https://*.netlify.com; manifest-src 'self';
