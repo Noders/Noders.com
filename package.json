@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
-    "build": "preact build --no-prerender --template src/assets/template.html && npm run post-build",
+    "build": "preact build --template src/assets/template.html && npm run post-build",
     "post-build": "cp ./static/* ./build",
     "build:pre-render": "preact build",
     "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
@@ -37,6 +37,7 @@
     "bulma": "0.6.1",
     "eslint-plugin-node": "^5.2.1",
     "gh-pages": "^1.1.0",
+    "intersection-observer": "^0.5.0",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "preact": "^8.2.6",
