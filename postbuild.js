@@ -1,25 +1,25 @@
 const critical = require('critical');
-const { open, close } = require('fs');
+const cheerio = require('cheerio')
+const { readFile, writeFile } = require('fs');
 const { resolve } = require('path')
 const { promisify } = require('util');
-const openPromisified = promisify(open);
-const closePromisified = promisify(close);
+const readFilePromisified = promisify(readFile);
+const writeFilePromisified = promisify(writeFile);
 
-const filename = 'critical.css'
-const touch = filename => {
-  const route = resolve('build', filename)
-  console.log(route)
-  return openPromisified(route, 'w').then(closePromisified);
-}
+const baseHTML = 'index.html'
+const baseHTMLInline = 'index.inline.html'
+const indexHTML = resolve('build', baseHTML)
+const indexHTMLInline = resolve('build', baseHTMLInline)
 
 const start = async () => {
   try {
-    await touch(filename)
-    await critical.generate({
+    // await touch(filename)
+    const indexHTMLRaw = await readFilePromisified(indexHTML)
+    const $ = cheerio.load(indexHTMLRaw)
+    const data = await critical.generate({
       minify: true,
       base: 'build',
       src: 'index.html',
-      dest: filename,
       dimensions: [{
         height: 740,
         width: 420
@@ -28,6 +28,9 @@ const start = async () => {
         width: 1280
       }]
     })
+    $('#inline_styles').html(data)
+    const newHtml = $.root().html();
+    writeFilePromisified(indexHTML, newHtml)
   } catch (e) {
     console.log('////////////////////////////')
     console.error(e)
