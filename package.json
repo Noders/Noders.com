@@ -7,7 +7,7 @@
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "build": "preact build --template src/assets/template.html && npm run post-build",
-    "post-build": "cp ./static/* ./build",
+    "post-build": "cp ./static/* ./build && node ./postbuild",
     "build:pre-render": "preact build",
     "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
     "dev": "preact watch",
