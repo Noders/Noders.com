@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="description" content="La Comunidad de NodeJS y JavaScript más electrizante de LatinoAmérica">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
-    <style id="inline_styles">body{ margin: 0; }</style>
-		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
-			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
-		<% } %>
-		<% for (var chunk of webpack.chunks) { %>
-		 <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
-			<% for (var file of chunk.files) { %>
-				<% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
-					<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
-				<% } else if (file.match(/manifest\.json$/)) { %>
-					<link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath + file %>">
-				<% } %>
-			<% } %>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <meta name="description" content="La Comunidad de NodeJS y JavaScript más electrizante de LatinoAmérica">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+  <style id="inline_styles">
+    body {
+      margin: 0;
+    }
+  </style>
+  <% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
+    <meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
+  <% } %>
+</head>
+
+<body>
+  <%= htmlWebpackPlugin.options.ssr({
+    url: '/'
+  }) %>
+  <% for (var chunk of webpack.chunks) { %>
+    <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
+    <% for (var file of chunk.files) { %>
+      <% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
+        <link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+      <% } else if (file.match(/manifest\.json$/)) { %>
+          <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath + file %>">
+      <% } %>
     <% } %>
-	</head>
-	<body>
-		<%= htmlWebpackPlugin.options.ssr({
-			url: '/'
-		}) %>
-		<script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
-    <script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
-    <noscript>
-      <style>
-        body {
-          background: #222;
-        }
-        div {
-          width: 80%;
-          margin: 0 auto;
-          padding: 100px;
-          text-align: center;
-        }
-        p {
-          font-size: 24px;
-          color: #f2f2f2;
-        }
-      </style>
-      <div>
-        <img src="./140e6e4d033890a1c55a6040bed417fd.png" alt="Logo Noders" />
-        <p>Si habilitas JavaScript en tu navegador, vas a ver una versión al menos 17% mejor de este sitio.</p>
-      </div>
-    </noscript>
-	</body>
+  <% } %>
+  <script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+  <script>window.fetch || document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+  <noscript>
+    <style>
+      body {
+        background: #222;
+      }
+
+      div {
+        width: 80%;
+        margin: 0 auto;
+        padding: 100px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 24px;
+        color: #f2f2f2;
+      }
+    </style>
+    <div>
+      <p>Si habilitas JavaScript en tu navegador, vas a ver una versión al menos 17% mejor de este sitio.</p>
+    </div>
+  </noscript>
+</body>
+
 </html>
