@@ -11,7 +11,6 @@ const glob = require('glob');
 
 const baseHTML = 'index.html';
 const indexHTML = resolve('build', baseHTML);
-const cssFile = resolve('build', './');
 
 const removeItemsAlreadyInCriticalArray = (cssArray, criticalCssArray) => {
   const newCssArray = Object.assign({}, cssArray);
@@ -128,4 +127,5 @@ const getCriticalCSS = async () => {
   });
   return criticalCSS;
 };
+
 start();
