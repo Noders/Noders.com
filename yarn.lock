@@ -2235,6 +2235,13 @@ css-tree@1.0.0-alpha25:
     mdn-data "^1.0.0"
     source-map "^0.5.3"
 
+css-tree@^1.0.0-alpha.28:
+  version "1.0.0-alpha.28"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha.28.tgz#8e8968190d886c9477bc8d61e96f61af3f7ffa7f"
+  dependencies:
+    mdn-data "~1.1.0"
+    source-map "^0.5.3"
+
 css-url-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/css-url-regex/-/css-url-regex-1.1.0.tgz#83834230cc9f74c457de59eebd1543feeb83b7ec"
@@ -2309,6 +2316,12 @@ csso@~2.3.1:
   dependencies:
     clap "^1.0.9"
     source-map "^0.5.3"
+
+csstree@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/csstree/-/csstree-0.0.3.tgz#97b680c0ccfd4d0ffcf80c061279694ba9c3c8cb"
+  dependencies:
+    string-iterator "0.0.1"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -5250,7 +5263,7 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
-mdn-data@^1.0.0:
+mdn-data@^1.0.0, mdn-data@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.1.0.tgz#a7056319da95a2d0881267d7263075042eb061e2"
 
@@ -7502,6 +7515,10 @@ stream-shift@^1.0.0:
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+
+string-iterator@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/string-iterator/-/string-iterator-0.0.1.tgz#1481bd8d80b5a18886a79050802179e1a9f3a184"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
