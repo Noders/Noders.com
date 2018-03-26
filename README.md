@@ -37,9 +37,9 @@ Lighthouse is an open-source, google-backed, automated tool for improving the qu
 | First Header        | Second Header |
 | ------------------- | ------------- |
 | Progressive Web App | 100           |
-| Performance         | 88            |
+| Performance         | 90            |
 | Accessibility       | 100           |
-| Best Practices      | 94            |
+| Best Practices      | 100           |
 
 ## License
 
