@@ -5,18 +5,29 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn lint && preact test",
-    "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
-    "build": "preact build --template src/assets/template.html && npm run post-build",
+    "start":
+      "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
+    "build":
+      "preact build --template src/assets/template.html && npm run post-build",
     "post-build": "cp ./static/* ./build",
     "build:pre-render": "preact build",
-    "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
+    "serve":
+      "preact build --template src/assets/template.html  && npm run post-build && preact serve",
     "dev": "preact watch",
     "lint": "eslint src",
     "deploy": "gh-pages -d build",
     "deploy:staging": "gh-pages -d build -b gh-pages-staging",
     "headers": "cp src/_headers build/_headers",
     "yolo": "yarn build && yarn headers && yarn deploy",
-    "yolo:staging": "yarn build && yarn headers && yarn deploy:staging"
+    "yolo:staging": "yarn build && yarn headers && yarn deploy:staging",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,md}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -24,14 +35,19 @@
   "devDependencies": {
     "babel-eslint": "8.0.3",
     "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-preact": "^1.1.6",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
     "font-awesome": "^4.7.0",
-    "if-env": "^1.0.0"
+    "husky": "^0.14.3",
+    "if-env": "^1.0.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
   },
   "dependencies": {
     "bulma": "0.6.1",
