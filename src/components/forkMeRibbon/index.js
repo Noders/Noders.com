@@ -33,5 +33,5 @@ const ForkMeRibbon = () => (
       </svg>
     </a>
   </div>
-)
+);
 export default ForkMeRibbon;
