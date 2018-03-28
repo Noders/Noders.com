@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['standard', 'standard-preact'],
+  extends: ['standard', 'standard-preact', 'plugin:prettier/recommended'],
   rules: {
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
