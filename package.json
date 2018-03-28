@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn lint && preact test",
-    "start":
-      "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
-    "build":
-      "preact build --template src/assets/template.html && npm run post-build",
+    "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
+    "pre-build": "eslint ./src",
+    "build": "preact build --template src/assets/template.html && npm run post-build",
     "post-build": "cp ./static/* ./build",
     "build:pre-render": "preact build",
     "serve":
