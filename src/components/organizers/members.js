@@ -40,9 +40,9 @@ const members = [
     github: 'carolina-pinzon'
   },
   {
-    username: 'nicoavila',
-    image: 'nicolas.jpg',
-    twitter: 'nicoavila_a'
+    username: 'max',
+    image: 'creedarky.jpg',
+    twitter: 'creedarky'
   },
   {
     username: 'taty',
