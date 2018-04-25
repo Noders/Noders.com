@@ -43,11 +43,6 @@ const members = [
     username: 'max',
     image: 'creedarky.jpg',
     twitter: 'creedarky'
-  },
-  {
-    username: 'taty',
-    image: 'taty.jpg',
-    twitter: 'tatymolys'
   }
 ];
 
