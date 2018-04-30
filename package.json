@@ -57,6 +57,7 @@
     "preact": "^8.2.6",
     "preact-cli": "^2.1.0",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "slack": "^11.0.0"
   }
 }
