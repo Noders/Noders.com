@@ -10,8 +10,7 @@
     "build": "preact build --template src/assets/template.html && npm run post-build",
     "post-build": "cp ./static/* ./build",
     "build:pre-render": "preact build",
-    "serve":
-      "preact build --template src/assets/template.html  && npm run post-build && preact serve",
+    "serve": "preact build --template src/assets/template.html  && npm run post-build && preact serve",
     "dev": "preact watch",
     "lint": "eslint src",
     "deploy": "gh-pages -d build",
@@ -55,9 +54,11 @@
     "intersection-observer": "^0.5.0",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "node-fetch": "^2.1.2",
     "preact": "^8.2.6",
     "preact-cli": "^2.1.0",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "slack": "^11.0.0"
   }
 }

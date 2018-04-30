@@ -5724,6 +5724,10 @@ node-fetch@^1.0.1, node-fetch@^1.7.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
+node-fetch@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
+
 node-forge@0.6.33:
   version "0.6.33"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.6.33.tgz#463811879f573d45155ad6a9f43dc296e8e85ebc"
@@ -7487,6 +7491,12 @@ simplehttp2server@^2.0.0:
     bin-wrapper "^3.0.2"
     logalot "^2.1.0"
 
+slack@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/slack/-/slack-11.0.0.tgz#3fb4c5b826d8d7e98a5d81ac65958b1e3de53f26"
+  dependencies:
+    tiny-json-http "^7.0.0"
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -8072,6 +8082,10 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tiny-json-http@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/tiny-json-http/-/tiny-json-http-7.0.0.tgz#1b1240efa591cd0faa5845f844694e79563ac2a2"
 
 tmp@0.0.31, tmp@^0.0.31:
   version "0.0.31"
