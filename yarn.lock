@@ -7491,12 +7491,6 @@ simplehttp2server@^2.0.0:
     bin-wrapper "^3.0.2"
     logalot "^2.1.0"
 
-slack@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/slack/-/slack-11.0.0.tgz#3fb4c5b826d8d7e98a5d81ac65958b1e3de53f26"
-  dependencies:
-    tiny-json-http "^7.0.0"
-
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -8082,10 +8076,6 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
-
-tiny-json-http@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/tiny-json-http/-/tiny-json-http-7.0.0.tgz#1b1240efa591cd0faa5845f844694e79563ac2a2"
 
 tmp@0.0.31, tmp@^0.0.31:
   version "0.0.31"
