@@ -5,11 +5,6 @@ const members = [
     twitter: 'fforres'
   },
   {
-    username: 'Xabadu',
-    image: 'xabadu.jpg',
-    twitter: 'xabadu'
-  },
-  {
     username: 'DMaster69',
     image: 'dmaster.jpg',
     twitter: 'DMaster69'
