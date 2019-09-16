@@ -7,11 +7,9 @@
     "test": "yarn lint && preact test",
     "start": "if-env NODE_ENV=production && yarn run -s serve || yarn run -s dev",
     "pre-build": "eslint ./src",
-    "build": "preact build --template src/assets/template.html && npm run post-build",
-    "post-build": "cp ./static/* ./build",
+    "build": "preact build --template src/assets/template.html",
     "build:pre-render": "preact build",
-    "serve":
-      "preact build --template src/assets/template.html  && npm run post-build && preact serve",
+    "serve": "preact build --template src/assets/template.html && preact serve",
     "dev": "preact watch",
     "lint": "eslint src",
     "deploy": "gh-pages -d build",
@@ -31,33 +29,31 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "8.0.3",
-    "eslint": "^4.12.1",
+    "bulma": "0.6.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-preact": "^1.1.6",
+    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
+    "eslint": "^4.12.1",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "if-env": "^1.0.0",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.11.1"
-  },
-  "dependencies": {
-    "bulma": "0.6.1",
-    "eslint-plugin-node": "^5.2.1",
-    "gh-pages": "^1.1.0",
     "intersection-observer": "^0.5.0",
-    "less": "^2.7.3",
     "less-loader": "^4.0.5",
-    "preact": "^8.2.6",
+    "less": "^2.7.3",
+    "lint-staged": "^7.0.0",
     "preact-cli": "^2.1.0",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "preact": "^8.2.6",
+    "prettier": "^1.11.1"
   }
 }
