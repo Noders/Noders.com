@@ -32,7 +32,7 @@ const Media = () => (
         <div className="level-item has-text-centered">
           <figure>
             <a
-              href="http://www.noders.fm"
+              href="https://www.noders.fm"
               target="_blank"
               rel="noopener"
               className={style}
