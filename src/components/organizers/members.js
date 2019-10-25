@@ -8,6 +8,11 @@ const members = [
     username: 'enBonnet',
     image: 'bonnet.jpg',
     twitter: 'enBonnet'
+  },
+  {
+    username: 'lporras',
+    image: 'lporras.jpg',
+    twitter: 'lporras16'
   }
 ];
 
