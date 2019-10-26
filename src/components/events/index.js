@@ -8,7 +8,9 @@ const Events = () => (
     <div className="container">
       <a name="eventos" />
       <div className="section-title">
-        <h1 className="title">Eventos</h1>
+        <h1 className="title" id="eventos">
+          Eventos
+        </h1>
         <hr />
       </div>
       <div class={classJoin('level', 'section-content', style.events)}>

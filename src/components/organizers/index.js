@@ -53,7 +53,9 @@ class Organizers extends Component {
         <div className="container">
           <a name="comunidad" />
           <div className="section-title">
-            <h1 className="title">Organizadores</h1>
+            <h1 className="title" id="organizadores">
+              Organizadores
+            </h1>
             <hr />
           </div>
           <div

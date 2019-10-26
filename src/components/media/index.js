@@ -8,7 +8,9 @@ const Media = () => (
     <div className="container">
       <a name="media" />
       <div className="section-title">
-        <h1 className="title">Media</h1>
+        <h1 className="title" id="media">
+          Media
+        </h1>
         <hr />
       </div>
       <div className={classJoin('level', 'section-content')}>

@@ -6,7 +6,9 @@ const CodeOfConduct = () => (
   <section className={'section'}>
     <div className="container">
       <div className="section-title">
-        <h1 className="title">Código de Conducta</h1>
+        <h1 className="title" id="codigo_de_conducta">
+          Código de Conducta
+        </h1>
         <hr />
       </div>
       <div className="section-content">
@@ -27,7 +29,8 @@ const CodeOfConduct = () => (
                 rel="noopener"
               >
                 Código de Conducta
-              </a>.
+              </a>
+              .
             </p>
             <p>
               Si quieres participar de alguno de ellos, te pedimos que lo

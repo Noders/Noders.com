@@ -167,7 +167,9 @@ export default class Noders extends Component {
         <div className="container">
           <a name="comunidad" />
           <div className="section-title">
-            <h1 className="title">Comunidad</h1>
+            <h1 className="title" id="comunidad">
+              Comunidad
+            </h1>
             <hr />
           </div>
           {ready && (
