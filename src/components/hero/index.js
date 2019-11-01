@@ -38,7 +38,8 @@ export default class Hero extends Component {
         <Picture alt="Logo Noders" imageName="noderslogo_2.png" />
         <h1>¿Por qué? Porque nos gusta</h1>
         <a
-          href="https://fforres.typeform.com/to/z2Rj7z"
+          target="_blank"
+          href="https://join.slack.com/t/noders/shared_invite/enQtMjk3MTA5MTk5MDExLTRjNTQ4MTdkN2MzZThhMGQ5YzUzZWU0NDQ0Zjk2ZDhjNjlhMzA4MWViMjE2NGY5MDliM2VmOGYyYTNjYTg0MGY"
           class={classJoin(
             'button',
             'is-success',
