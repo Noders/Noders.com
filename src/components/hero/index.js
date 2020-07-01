@@ -39,7 +39,7 @@ export default class Hero extends Component {
         <h1>¿Por qué? Porque nos gusta</h1>
         <a
           target="_blank"
-          href="https://join.slack.com/t/noders/shared_invite/enQtMjk3MTA5MTk5MDExLTRjNTQ4MTdkN2MzZThhMGQ5YzUzZWU0NDQ0Zjk2ZDhjNjlhMzA4MWViMjE2NGY5MDliM2VmOGYyYTNjYTg0MGY"
+          href="https://noders.live/discord"
           class={classJoin(
             'button',
             'is-success',
@@ -47,10 +47,12 @@ export default class Hero extends Component {
             style.mainButtonCta
           )}
         >
-          <span class="icon">
-            <i class="icon icon-slack" />
-          </span>
-          <span>Únete a nuestro Slack</span>
+          <span>Únete a nuestro Discord</span>
+          <Picture
+            alt="Logo Discord"
+            imageName="discord.png"
+            className={style.icon}
+          />
         </a>
       </div>
     );
